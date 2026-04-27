@@ -67,7 +67,7 @@ tr:hover td{background:rgba(26,92,56,.03)}
 .mono{font-family:'JetBrains Mono',monospace;font-size:.75rem}
 table.gold th{background:#7a5f00}
 table.blue th{background:var(--b)}
-@media(max-width:600px){table{display:block;overflow-x:auto;font-size:.78rem}}
+@media(max-width:600px){table{width:100%;font-size:.78rem}.table-wrap{overflow-x:auto;max-width:100%;-webkit-overflow-scrolling:touch}}
 
 /* BOX */
 .box-g{background:var(--v);padding:1.25rem 1.75rem;margin:1.5rem 0;border-radius:0}
@@ -215,7 +215,7 @@ canvas{max-width:100%}
   <a href="riflessioni.html">Riflessioni</a>
   <a href="principi.html">Principi</a>
   <a href="fonti.html">Fonti & WIP</a>
-  <a class="mhome" href="sistema_italia_v124.pdf" target="_blank">PDF Completo ↓</a>
+  <a class="mhome" href="sistema_italia_v137.pdf" target="_blank">PDF Completo ↓</a>
 </div>
 <div class="ch-hero">
   <div class="ch-hero-inner">
@@ -229,7 +229,7 @@ canvas{max-width:100%}
 <h2>Il Sistema Attuale — Perché è Rotto</h2>
 <p>Oggi in Italia le tasse sul reddito funzionano a scaglioni: più guadagni, più paghi — in teoria. Ma il sistema è talmente complicato che nessuno sa davvero quanto paga. Ci sono addizionali regionali, addizionali comunali, IRAP, IRES, IMU, bollo auto, canone RAI, TARI, contributi previdenziali — ognuno con le sue regole, le sue scadenze, i suoi moduli. Un cittadino normale non riesce a fare la dichiarazione da solo.</p>
 
-<table><tr><th>Tassa</th><th>Chi paga</th><th>Quanto</th><th>Problema strutturale</th></tr>
+<table style="width:100%"><tr><th>Tassa</th><th>Chi paga</th><th>Quanto</th><th>Problema strutturale</th></tr>
 <tr><td>IRPEF</td><td>Tutti i lavoratori</td><td>23% fino €15k, 25% fino €28k, 35% fino €50k, 43% oltre</td><td>Non si può dedurre quasi nulla. Si paga sul lordo.</td></tr>
 <tr><td>Contributi INPS</td><td>Lavoratori e datori</td><td>~33% del lordo</td><td>Spariscono nel calderone. Nessuna certezza di ritorno.</td></tr>
 <tr><td>IVA</td><td>Tutti i consumatori</td><td>22% ordinaria, 10% ridotta, 4% super ridotta</td><td>Inclusa nei prezzi. Non si vede ma si paga sempre.</td></tr>
@@ -269,7 +269,7 @@ canvas{max-width:100%}
 <p>Tutte le spese sono deducibili. Nessuna esclusa. Non esiste una lista di spese ammesse e una di spese escluse. Non esiste una categoria privilegiata. Qualsiasi cosa tu compri in Italia — cibo, vestiti, auto, vacanze, ristoranti, servizi, abbonamenti, bollette, affitti, manutenzioni — se è certificata con il tuo codice fiscale, abbatte il tuo reddito imponibile. Punto.</p>
 <p>Questo è intenzionale. Non interessa allo Stato cosa compri o come spendi: interessa che il denaro circoli nell'economia italiana. Chi compra uno yacht deduce lo yacht. Chi compra il pane deduce il pane. La logica è la stessa: il denaro è stato speso in Italia, ha generato IVA, ha pagato lavoratori, ha fatto girare l'economia. Il sistema ha già ricevuto la sua parte.</p>
 
-<table><tr><th>Tipo di pagamento</th><th>Come funziona — Cosa viene registrato</th></tr>
+<table style="width:100%"><tr><th>Tipo di pagamento</th><th>Come funziona — Cosa viene registrato</th></tr>
 <tr><td>Pagamento digitale (carta, bonifico, app)</td><td>Il CF del pagante e del ricevente vengono abbinati automaticamente alla transazione. Viene registrato: importo, data, mittente, destinatario — in tempo reale al sistema fiscale.</td></tr>
 <tr><td>Pagamento in contanti</td><td>Il venditore inserisce il CF del cliente nel registratore di cassa certificato prima del pagamento. La registrazione è identica al digitale: il contante non è anonimo.</td></tr>
 <tr><td>Ricezione di qualsiasi importo</td><td>Chiunque riceva denaro — azienda, privato, libero professionista — deve fornire il proprio CF. Il sistema registra automaticamente l'entrata.</td></tr>
@@ -321,7 +321,7 @@ canvas{max-width:100%}
 <p>La logica è semplice: la democrazia funziona quando nessuno ha abbastanza denaro da comprare i rappresentanti. Con un cap di €200.000, nessun cittadino ha la forza economica per distorcere il sistema politico. Le grandi decisioni restano ai cittadini collettivamente — non a chi ha più miliardi.</p>
 
 <h3>Bonus Figli</h3>
-<table><tr><th>Situazione</th><th>Cap aggiuntivo</th><th>Logica</th></tr>
+<table style="width:100%"><tr><th>Situazione</th><th>Cap aggiuntivo</th><th>Logica</th></tr>
 <tr><td>Ogni figlio under 18</td><td class="mono">+€25.000 per genitore</td><td>Garantisce stabilità economica alla famiglia con figli</td></tr>
 <tr><td>Genitore solo</td><td class="mono">+€50.000 per figlio</td><td>Doppio onere su una sola persona</td></tr>
 <tr><td>Figlio che compie 18 anni</td><td>Il figlio riceve quella quota come base di partenza</td><td>Ogni giovane inizia la vita adulta con un patrimonio minimo</td></tr>
@@ -329,7 +329,7 @@ canvas{max-width:100%}
 
 <h3>Cap per le Aziende — Proporzionale al Fatturato</h3>
 <p>Le aziende seguono regole diverse rispetto ai cittadini. Un'azienda con 5 dipendenti e €1 milione di fatturato ha bisogno di liquidità operativa diversa da un'azienda con 60.000 dipendenti e miliardi di fatturato. Il cap aziendale non è fisso — è proporzionale al giro d'affari.</p>
-<table><tr><th>Fatturato annuo</th><th>Cap liquidità</th><th>Logica</th></tr>
+<table style="width:100%"><tr><th>Fatturato annuo</th><th>Cap liquidità</th><th>Logica</th></tr>
 <tr><td>Fino a €1M</td><td class="mono">€500k</td><td>~6 mesi di operatività garantiti</td></tr>
 <tr><td>€1M — €10M</td><td class="mono">30% del fatturato</td><td>Margine di manovra per PMI</td></tr>
 <tr><td>€10M — €100M</td><td class="mono">20% del fatturato</td><td>Aziende medie — scala proporzionale</td></tr>
@@ -387,7 +387,7 @@ canvas{max-width:100%}
 
 <h3>Tassazione Multinazionali — "Vendi qui? Paghi qui."</h3>
 <p>Il principio è semplice: se una multinazionale vende beni o servizi in Italia, paga le tasse sul fatturato italiano — indipendentemente da dove ha la sede legale. Il 20% sul fatturato italiano non è negoziabile e non ha scappatoie: i dati di vendita sono registrati automaticamente.</p>
-<table><tr><th>Azienda</th><th>Fatturato in Italia</th><th>Tasse oggi</th><th>% effettiva</th><th>Nuovo sistema (20%)</th><th>Delta</th></tr>
+<table style="width:100%"><tr><th>Azienda</th><th>Fatturato in Italia</th><th>Tasse oggi</th><th>% effettiva</th><th>Nuovo sistema (20%)</th><th>Delta</th></tr>
 <tr><td>Amazon</td><td class="mono">€6,0B</td><td class="bad">€100M</td><td class="bad">1,6%</td><td class="good">€1,2B</td><td class="good">+€1,1B</td></tr>
 <tr><td>Apple</td><td class="mono">€4,0B</td><td class="bad">€80M</td><td class="bad">2,0%</td><td class="good">€800M</td><td class="good">+€720M</td></tr>
 <tr><td>Google</td><td class="mono">€3,0B</td><td class="bad">€50M</td><td class="bad">1,6%</td><td class="good">€600M</td><td class="good">+€550M</td></tr>
@@ -398,6 +398,21 @@ canvas{max-width:100%}
 
 
 <div class="divider"></div>
+
+<h3>Come si Leggono le Barre Verdi — Le Assunzioni del Modello</h3>
+<p>Le barre rosse sono calcolate con le aliquote IRPEF 2024 ufficiali. Le barre verdi usano questo modello: la tassa si calcola sull'80% del residuo annuo non speso. Il residuo dipende da quanto la persona spende:</p>
+
+<table style="font-size:.82rem;width:100%">
+<tr><th>Reddito</th><th>IRPEF oggi</th><th>Assunzione risparmio</th><th>Residuo</th><th>Tassa nuova</th><th>Differenza</th></tr>
+<tr><td>€20.000</td><td class="bad">€4.700</td><td>0% — spende tutto</td><td>€0</td><td class="good">€0</td><td class="good"><strong>-€4.700</strong></td></tr>
+<tr><td>€40.000</td><td class="bad">€10.900</td><td>0% — spende tutto</td><td>€0</td><td class="good">€0</td><td class="good"><strong>-€10.900</strong></td></tr>
+<tr><td>€80.000</td><td class="bad">€27.300</td><td>~17% — risparmia €14k</td><td>€14.000</td><td class="mono">€11.200</td><td class="good"><strong>-€16.100</strong></td></tr>
+<tr><td>€150.000</td><td class="bad">€57.400</td><td>~33% — risparmia €50k</td><td>€50.000</td><td class="mono">€40.000</td><td class="good"><strong>-€17.400</strong></td></tr>
+<tr><td>€500.000</td><td class="bad">€207.900</td><td>~58% — risparmia €290k</td><td>€290.000</td><td class="mono">€232.000</td><td class="bad"><strong>+€24.100</strong></td></tr>
+</table>
+
+<p style="font-size:.85rem;color:var(--g);margin-top:.8rem"><em>Nota: se a €80k si spende tutto — residuo zero — la tassa nel nuovo sistema è zero, non €11.200. Se si risparmia di più, la tassa aumenta proporzionalmente. Chi spende in Italia non paga nulla. Chi accumula paga sull'eccedenza. È una scelta — non un obbligo.</em></p>
+
 <h2>Il Salario Minimo Non Esiste — Non Serve</h2>
 <p>Nel nuovo sistema non esiste un salario minimo per legge. Non perché i lavoratori debbano accettare qualsiasi cosa — ma perché il meccanismo lo rende inutile strutturalmente.</p>
 <p>Ogni lavoratore sa esattamente qual è il suo costo della vita reale: €850/mese di fondo pensione obbligatorio, assicurazione auto, sanitaria, affitto, spese quotidiane. Tutto detraibile al 100%. Sotto quella soglia personale non accetta il lavoro — non per una legge ma perché non gli conviene. È un salario minimo individualizzato e automatico, calibrato sulla vita reale di quella persona, non su un numero generico deciso da chi non la conosce.</p>
@@ -426,7 +441,7 @@ canvas{max-width:100%}
 <div class="divider"></div>
 <h2>Il Bonus Figli — Cap e Famiglia</h2>
 <p>Il cap di €200.000 è una regola universale. Ma una famiglia con figli ha strutturalmente più spese di una persona sola — istruzione, abbigliamento, attività, cibo, spazio fisico. Non sarebbe giusto che chi ha figli venisse penalizzato rispetto a chi non ne ha. Il bonus non è un privilegio — è il riconoscimento della realtà economica di chi sta crescendo una persona.</p>
-<p>Per ogni figlio under 18 il cap del genitore aumenta di €25.000. Con un figlio: €225.000. Con due figli: €250.000. Con tre: €275.000. Il genitore solo ha il doppio del bonus per figlio — €50.000 — perché porta il peso economico da solo: con un figlio il suo cap sale a €250.000.</p>
+<p>Per ogni figlio fino al giorno del suo diciottesimo anno di età il cap del genitore aumenta di €25.000. Con un figlio: €225.000. Con due figli: €250.000. Con tre: €275.000. Il genitore solo ha il doppio del bonus per figlio — €50.000 — perché porta il peso economico da solo: con un figlio il suo cap sale a €250.000.</p>
 <p>Questi extra non sono soldi messi da parte per il figlio. Sono semplicemente un margine più alto che il genitore può tenere sul proprio conto. La famiglia decide come usarli.</p>
 
 <h3>Cosa Succede Ogni Anno</h3>
@@ -435,13 +450,24 @@ canvas{max-width:100%}
 <h3>Al Compimento dei 18 Anni</h3>
 <p>Il figlio diventa maggiorenne. Da quel giorno il bonus cessa — il cap del genitore torna a €200.000. A questo punto ci sono due scenari:</p>
 
-<table><tr><th>Scenario</th><th>Situazione al giorno dei 18 anni</th><th>Cosa succede</th></tr>
+<table style="width:100%"><tr><th>Scenario</th><th>Situazione al giorno dei 18 anni</th><th>Cosa succede</th></tr>
 <tr><td><strong>Genitore sotto il cap</strong></td><td>Ha €180.000 sul conto — sotto i €200.000</td><td>Nulla si trasferisce. Il cap torna a €200.000. Il figlio non riceve niente — inizia da zero.</td></tr>
 <tr><td><strong>Genitore sopra il cap</strong></td><td>Ha €230.000 sul conto — €30.000 oltre i €200.000</td><td class="good">I €30.000 eccedenti vanno al figlio come liquidità normale, soggetti alle sue regole personali.</td></tr>
 </table>
 
 <p>I soldi ricevuti dal figlio entrano nel suo conto come liquidità normale. Nessuna categoria fiscale diversa, nessuna traccia storica. Se ricevesse soldi e superasse il cap di €200.000, si applicano le regole standard: 12 mesi per spendere l'eccedenza, altrimenti viene trattenuta. Nessuna eccezione.</p>
 <div class="box-o"><p><em>Questo non è un'eredità nel senso tradizionale. È la restituzione naturale di un margine concesso per sostenere la famiglia durante la crescita. Finita quella fase, il margine finisce. Quello che c'era dentro passa al diretto interessato come punto di partenza nella vita adulta.</em></p></div>
+
+
+<div class="divider"></div>
+<h2>L'Artigiano e la Piccola Impresa</h2>
+<p>Nel nuovo sistema non esiste una categoria speciale "artigiano". Non esistono regime forfettario, codici ATECO, albi obbligatori, partite IVA speciali. Questo non svantaggia l'artigiano — lo libera. Le regole sono uguali per tutti e le regole generali sono già progettate per chi lavora e produce.</p>
+<table style="width:100%"><tr><th>Figura</th><th>Come viene trattato</th><th>Vantaggio concreto</th></tr>
+<tr><td><strong>Artigiano solo</strong></td><td>È una persona fisica. Guadagna, deduce le spese al 100%, paga solo sul residuo netto.</td><td class="good">Nessun regime speciale. Nessun commercialista per aprire o chiudere. Zero burocrazia.</td></tr>
+<tr><td><strong>Piccola impresa con collaboratori</strong></td><td>È un'azienda. Segue le regole del cap aziendale proporzionale al fatturato.</td><td class="good">Nessun INPS, nessun contratto collettivo obbligatorio. Rapporto diretto e trasparente.</td></tr>
+<tr><td><strong>Quando smette</strong></td><td>Persona fisica: smette e basta. Azienda: chiude il conto aziendale.</td><td class="good">Nessuna liquidazione, nessuna iscrizione camerale da cancellare. Fine.</td></tr>
+</table>
+<div class="box-o"><p><em>L'artigiano sta meglio per forza — non per una legge di favore, ma perché le regole generali sono pensate per chi lavora, produce e fa girare l'economia. Non per chi accumula e non fa nulla.</em></p></div>
 
 <div class="ch-nav"><a href="debito.html">← Il Debito</a><a class="home" href="index.html">⌂ Home</a><a href="bilancio.html">02 — Bilancio →</a></div>
 </div>

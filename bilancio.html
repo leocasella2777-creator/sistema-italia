@@ -67,7 +67,7 @@ tr:hover td{background:rgba(26,92,56,.03)}
 .mono{font-family:'JetBrains Mono',monospace;font-size:.75rem}
 table.gold th{background:#7a5f00}
 table.blue th{background:var(--b)}
-@media(max-width:600px){table{display:block;overflow-x:auto;font-size:.78rem}}
+@media(max-width:600px){table{width:100%;font-size:.78rem}.table-wrap{overflow-x:auto;max-width:100%;-webkit-overflow-scrolling:touch}}
 
 /* BOX */
 .box-g{background:var(--v);padding:1.25rem 1.75rem;margin:1.5rem 0;border-radius:0}
@@ -215,7 +215,7 @@ canvas{max-width:100%}
   <a href="riflessioni.html">Riflessioni</a>
   <a href="principi.html">Principi</a>
   <a href="fonti.html">Fonti & WIP</a>
-  <a class="mhome" href="sistema_italia_v124.pdf" target="_blank">PDF Completo ↓</a>
+  <a class="mhome" href="sistema_italia_v137.pdf" target="_blank">PDF Completo ↓</a>
 </div>
 <div class="ch-hero">
   <div class="ch-hero-inner">
@@ -234,7 +234,7 @@ canvas{max-width:100%}
 <canvas id="chartBilancio" height="280"></canvas>
 </div>
 
-<table><tr><th>Voce di Entrata</th><th>Sistema Attuale</th><th>Nuovo Sistema</th><th>Delta</th></tr>
+<table style="width:100%"><tr><th>Voce di Entrata</th><th>Sistema Attuale</th><th>Nuovo Sistema</th><th>Delta</th></tr>
 <tr><td>Tassa redditi (IRPEF → residuo)</td><td class="mono">€275B</td><td class="mono">€70B</td><td class="bad">-€186B</td></tr>
 <tr><td>IVA (spesa tracciata +45%)</td><td class="mono">€175B</td><td class="mono">€200B</td><td class="good">+€25B</td></tr>
 <tr><td>Recupero evasione fiscale</td><td class="mono">€0</td><td class="mono">€63B</td><td class="good">+€63B</td></tr>
@@ -250,7 +250,7 @@ canvas{max-width:100%}
 <p>Il bilancio include ogni voce di spesa. Il personale statale aumenta perché con il ritorno delle grandi aziende alla gestione statale lo Stato acquisisce nuovo personale. Il saldo rimane positivo.</p>
 
 <h3>Il Personale delle Istituzioni Statali</h3>
-<table><tr><th>Istituzione</th><th>Dipendenti oggi</th><th>Nuovo sistema</th><th>Note</th></tr>
+<table style="width:100%"><tr><th>Istituzione</th><th>Dipendenti oggi</th><th>Nuovo sistema</th><th>Note</th></tr>
 <tr><td>PA centrale (ministeri, enti)</td><td class="mono">633.000</td><td class="mono">850.000</td><td>Aumento per gestire nuove funzioni statali</td></tr>
 <tr><td>Sanità pubblica (SSN)</td><td class="mono">652.000</td><td class="mono">850.000</td><td>Servizio migliorato richiede più personale. Zero ticket = più accessi.</td></tr>
 <tr><td>Istruzione (scuole + università)</td><td class="mono">893.000</td><td class="mono">950.000</td><td>Leggero aumento per università gratuita e più classi</td></tr>
@@ -260,7 +260,7 @@ canvas{max-width:100%}
 </table>
 
 <h3>Bilancio Completo Anno 1</h3>
-<table><tr><th>Voce di Spesa</th><th>Importo</th><th>Note</th></tr>
+<table style="width:100%"><tr><th>Voce di Spesa</th><th>Importo</th><th>Note</th></tr>
 <tr><td><strong>ENTRATE TOTALI</strong></td><td class="good"><strong>+€412B</strong></td><td>IVA €200B + tassa residuo €70B + evasione €63B + estere €7B + cap €20B + gas €3B + aziende statali €15B + IVA transizione €26B + immobiliare €8B</td></tr>
 <tr><td>Personale statale (totale)</td><td class="bad">-€164B</td><td>Tutti i dipendenti pubblici incluse nuove funzioni</td></tr>
 <tr><td>Pensioni transizione (Cat A — già in pensione)</td><td class="bad">-€242B</td><td>Cala ~5%/anno per mortalità naturale. Anno 10: già -€120B.</td></tr>
@@ -287,7 +287,7 @@ canvas{max-width:100%}
 <h2>Come lo Stato Gestisce il Surplus — Priorità Vincolanti</h2>
 <p>Lo Stato guadagna molto nel nuovo sistema. Ma questo non significa che possa accumulare indefinitamente. Non esiste discrezionalità politica su questo: le regole sono scritte nella Costituzione e verificate dall'AI in tempo reale. Il surplus non è ricchezza dello Stato — è ricchezza dei cittadini gestita dallo Stato.</p>
 
-<table><tr><th>Priorità</th><th>Destinazione</th><th>Regola</th><th>Fino a quando</th></tr>
+<table style="width:100%"><tr><th>Priorità</th><th>Destinazione</th><th>Regola</th><th>Fino a quando</th></tr>
 <tr><td style="font-weight:bold;color:var(--r)">1 — Assoluta</td><td>Rimborso debito pubblico</td><td>Prima di qualsiasi altra spesa</td><td>Anno 18: debito = €0</td></tr>
 <tr><td style="font-weight:bold;color:var(--v)">2 — Strutturale</td><td>Fondo pensioni sovrano</td><td>Fino a raggiungere €3.100B</td><td>Anno 20: autofinanziante</td></tr>
 <tr><td>3 — Investimento</td><td>Infrastrutture e ricerca</td><td>Massimo 15% del surplus annuo</td><td>Permanente</td></tr>
@@ -300,7 +300,7 @@ canvas{max-width:100%}
 <h2>Contributi Esteri ed UE — Fine del Paradosso</h2>
 <p>L'Italia ha €2.900 miliardi di debito e paga €84 miliardi di interessi ogni anno. In questo contesto versare miliardi all'estero è un paradosso economico e morale. Non si può essere generosi con il denaro degli altri. Prima sistemiamo casa nostra — poi aiutiamo il mondo da una posizione di forza reale.</p>
 
-<table><tr><th>Voce</th><th>Oggi</th><th>Nuovo sistema</th><th>Risparmio</th></tr>
+<table style="width:100%"><tr><th>Voce</th><th>Oggi</th><th>Nuovo sistema</th><th>Risparmio</th></tr>
 <tr><td>Aiuto pubblico sviluppo (ODA) bilaterale</td><td class="bad">€3,6B/anno</td><td class="elim">Eliminato</td><td class="good">+€3,6B</td></tr>
 <tr><td>Quota netta bilancio UE (versa €18B, riceve €11B)</td><td class="bad">-€7B/anno netto</td><td class="good">Rinegoziata -30%</td><td class="good">+€2,1B</td></tr>
 <tr><td>Quote organizzazioni internazionali</td><td class="bad">~€2B/anno</td><td class="good">Ridotte del 50%</td><td class="good">+€1B</td></tr>
@@ -314,6 +314,51 @@ canvas{max-width:100%}
 <p>La RAI nel nuovo sistema si finanzia con pubblicità e abbonamenti da sola. Se è buona abbastanza da stare sul mercato, esiste. Se non lo è, non ha senso tenerla in vita con i soldi dei contribuenti.</p>
 
 <div class="box-b"><strong>Tetto del 5% ai finanziamenti privati:</strong> nessun singolo soggetto può rappresentare più del 5% del fatturato totale di una testata. Il tetto si applica alla proprietà reale — non al soggetto formale. L'AI aggrega automaticamente tutte le aziende dello stesso titolare. Chi aggira il tetto tramite holding, fiduciari o familiari viene trattato come se avesse superato il 5% direttamente.</div>
+
+
+<div class="divider"></div>
+<h2>Tassazione Aziende Estere — "Vendi qui? Paghi qui."</h2>
+<p>Amazon, Google, Apple, Meta, IKEA e centinaia di altre fatturano miliardi in Italia e pagano quasi zero tasse — perché hanno sede legale in Irlanda, Lussemburgo o Olanda dove le aliquote sono del 2-5%. Il problema non è nuovo: lo sanno tutti, nessuno lo ha risolto. Nel nuovo sistema la regola è semplice: <strong>qualsiasi ricavo generato da clienti italiani viene tassato in Italia, indipendentemente da dove ha sede l'azienda.</strong></p>
+
+<h3>Come Funziona Concretamente</h3>
+<p>Ogni transazione con un cliente italiano — identificato dal codice fiscale — genera un'obbligazione fiscale italiana nel momento stesso in cui avviene. L'azienda estera non sceglie se pagare: la tassa è trattenuta direttamente sul circuito di pagamento italiano. Carta di credito, bonifico, PayPal — il sistema intercetta il flusso e separa automaticamente la quota dovuta all'erario italiano. Non serve una sede in Italia. Non servono accordi bilaterali. Se vendi a un italiano, paghi in Italia.</p>
+<p>L'aliquota applicata è del 20% sul ricavo netto generato da clienti italiani. Con Amazon che fattura circa €6 miliardi in Italia: +€1,2 miliardi. Con tutte le multinazionali digitali e fisiche: <strong>gettito aggiuntivo stimato +€7-9 miliardi/anno.</strong> Questo è il principio del paese di destinazione — discusso in ambito UE da anni ma mai applicato con questa chiarezza.</p>
+
+
+<div class="divider"></div>
+<h2>Effetto Transizione — Anno Zero</h2>
+<p>Il passaggio al nuovo sistema non è a costo zero. Ma ci sono due effetti positivi straordinari che si concentrano nell'anno di transizione: la dichiarazione volontaria del nero e la conversione alla lira.</p>
+
+<h3>La Sanatoria del Nero</h3>
+<p>Dal giorno zero tutti i pagamenti in Italia avvengono in lire. Chi ha liquidità in nero — non dichiarata, non tracciata — si trova con euro fisici inutilizzabili in Italia. L'unica opzione è spenderli fuori, ma case, conti bancari, auto, investimenti sono tutti monitorati. Praticamente impossibile far circolare grandi somme in nero.</p>
+<p>Lo Stato offre una finestra di sanatoria: puoi dichiarare il nero senza sanzioni, convertirlo in lire e immetterlo nel sistema. L'unica condizione: rispettare il cap. Quei soldi devono essere spesi nell'economia italiana o vengono trattenuti dallo Stato. In ogni caso entrano nell'economia.</p>
+
+<table style="width:100%"><tr><th>Scenario</th><th>Liquidità dichiarata</th><th>IVA generata</th><th>Effetto PIL anno 1</th></tr>
+<tr><td>Conservativo (30%)</td><td class="mono">€75B</td><td class="good">€16B</td><td class="good">+€75B consumi</td></tr>
+<tr><td><strong>Realistico (50%)</strong></td><td class="mono"><strong>€125B</strong></td><td class="good"><strong>€27B</strong></td><td class="good"><strong>+€125B consumi</strong></td></tr>
+<tr><td>Ottimistico (70%)</td><td class="mono">€175B</td><td class="good">€38B</td><td class="good">+€175B consumi</td></tr>
+</table>
+<p style="font-size:.85rem;color:var(--g)"><em>Fonte base: ISTAT — economia sommersa ~11,3% del PIL (€237B/anno di flussi non dichiarati). Liquidità accumulata in nero stimata: €200-300 miliardi.</em></p>
+
+<h3>Stranieri e Controllo delle Transazioni</h3>
+<p>Uno straniero che paga in euro in Italia può farlo — ma ogni transazione va registrata. Se lo stesso straniero paga regolarmente e continuativamente in Italia diventa di fatto un residente. Come residente deve avere la tessera fiscale e seguire le stesse regole di tutti. Non esiste la scappatoia "pago in euro come straniero" in modo continuativo.</p>
+
+
+<div class="divider"></div>
+<h2>Gestione del Surplus Statale</h2>
+<p>Lo Stato nel nuovo sistema genera un avanzo strutturale di €107 miliardi/anno a regime. Questo surplus segue un ordine di priorità preciso — immettere troppo denaro nell'economia causa inflazione.</p>
+<table style="width:100%"><tr><th>Priorità</th><th>Destinazione</th><th>Logica</th><th>Quando</th></tr>
+<tr><td>1 — Riduzione debito</td><td>Rimborso BTP e titoli in scadenza</td><td class="good">Ogni euro eliminato = €0,029 di interessi in meno per sempre. Anno 1: risparmio €84B interessi.</td><td>Subito e continuativo</td></tr>
+<tr><td>2 — Acquisto oro</td><td>Quota del surplus in riserve auree</td><td class="good">Rafforza la lira, non crea inflazione perché l'oro non circola nell'economia.</td><td>In parallelo</td></tr>
+<tr><td>3 — Investimenti produttivi</td><td>Infrastrutture, ricerca, scuola, sanità</td><td>Aumentano PIL futuro. Non spesa corrente.</td><td>Massimo 2% PIL/anno</td></tr>
+<tr><td>4 — Sterilizzazione</td><td>Congelato come riserva monetaria</td><td class="bad">Se il surplus supera il 3% del PIL: non si immette nell'economia per evitare inflazione.</td><td>Quando surplus > 3% PIL</td></tr>
+</table>
+
+<div class="divider"></div>
+<h2>L'Informazione — Stessa Sorte della RAI</h2>
+<p>I contributi pubblici all'editoria vengono eliminati completamente: fondo straordinario editoria, contributi diretti, IVA agevolata al 4%, prepensionamenti INPGI. Tutto azzerato. Risparmio: ~€1B/anno.</p>
+<p>La logica è identica a quella della RAI: un giornale che produce qualcosa di valore trova lettori e trova ricavi. Un giornale che non trova lettori senza sussidio statale non sta servendo il pubblico — sta servendo chi lo finanzia.</p>
+<div class="box-o"><p><em>L'informazione indipendente non ha bisogno di protezione statale. Ha bisogno di non dipendere da nessuno. Il mercato è crudele ma onesto: chi scrive cose vere e utili alle persone trova lettori. Chi scrive per compiacere i finanziatori perde la fiducia — e con la fiducia perde i lettori.</em></p></div>
 
 <div class="ch-nav"><a href="fiscale.html">← 01 — Fiscale</a><a class="home" href="index.html">⌂ Home</a><a href="pensioni.html">03 — Pensioni →</a></div>
 </div>

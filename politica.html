@@ -64,7 +64,7 @@ tr:hover td{background:rgba(26,92,56,.03)}
 .mono{font-family:'JetBrains Mono',monospace;font-size:.75rem}
 table.gold th{background:#7a5f00}
 table.blue th{background:var(--b)}
-@media(max-width:600px){table{display:block;overflow-x:auto;font-size:.78rem}}
+@media(max-width:600px){table{width:100%;font-size:.78rem}.table-wrap{overflow-x:auto;max-width:100%;-webkit-overflow-scrolling:touch}}
 
 /* BOX */
 .box-g{background:var(--v);padding:1.25rem 1.75rem;margin:1.5rem 0;border-radius:0}
@@ -203,7 +203,7 @@ footer{background:var(--n);padding:2.5rem;text-align:center}
   <a href="riflessioni.html">Riflessioni</a>
   <a href="principi.html">Principi</a>
   <a href="fonti.html">Fonti & WIP</a>
-  <a class="mhome" href="sistema_italia_v124.pdf" target="_blank">PDF Completo ↓</a>
+  <a class="mhome" href="sistema_italia_v137.pdf" target="_blank">PDF Completo ↓</a>
 </div>
 <div class="ch-hero"><div class="ch-hero-inner">
   <div class="ch-num">07–13 — Sistema Politico</div>
@@ -216,7 +216,7 @@ footer{background:var(--n);padding:2.5rem;text-align:center}
 <p>La democrazia è il sistema meno peggio che abbiamo trovato per governare. Ma ha un problema che nessuno vuole ammettere: sei ignoranti comandano su quattro intelligenti. La maggioranza decide — anche quando non capisce cosa sta decidendo. Non è una questione di intelligenza come dote naturale — è di conoscenza. Se voti su una riforma fiscale senza sapere cos'è l'IVA, se scegli chi gestisce la sanità senza conoscere la Costituzione, stai guidando un aereo senza saper volare. Con la differenza che non muori solo tu.</p>
 <p>La soluzione non è togliere il diritto di voto — è renderlo una responsabilità. Come guidare: tutti possono imparare, ma devi dimostrare di saper farlo.</p>
 
-<table><tr><th>Dato</th><th>Italia oggi</th><th>Implicazione</th></tr>
+<table style="width:100%"><tr><th>Dato</th><th>Italia oggi</th><th>Implicazione</th></tr>
 <tr><td>Analfabetismo funzionale adulti</td><td class="bad">28-35%</td><td>Quasi 1 su 3 non capisce testi base</td></tr>
 <tr><td>Politici senza laurea (Camera 2022)</td><td class="bad">~40%</td><td>Governano senza formazione specifica</td></tr>
 <tr><td>Leggi italiane attive</td><td class="bad">~150.000</td><td>Migliaia si contraddicono tra loro</td></tr>
@@ -276,7 +276,7 @@ footer{background:var(--n);padding:2.5rem;text-align:center}
 <h2>10 — Il Meccanismo degli Impedimenti</h2>
 <p>Nel vecchio sistema, quando un politico non manteneva una promessa, la giustificazione era sempre pronta: "le condizioni sono cambiate", "il Parlamento non ha approvato". Mai verificabile, mai sanzionabile. Nel nuovo sistema ogni impedimento deve essere dichiarato formalmente e verificato dall'AI entro 48 ore.</p>
 
-<table><tr><th>Tipo di impedimento</th><th>Verifica AI</th><th>Conseguenza</th></tr>
+<table style="width:100%"><tr><th>Tipo di impedimento</th><th>Verifica AI</th><th>Conseguenza</th></tr>
 <tr><td>Evento esterno documentato (crisi, catastrofe)</td><td>AI verifica correlazione causale</td><td>Impedimento legittimo — promessa spostata con nuova scadenza</td></tr>
 <tr><td>Voto contrario del Parlamento</td><td>AI verifica il voto e chi ha votato contro</td><td>Impedimento legittimo — ma chi ha sabotato risponde</td></tr>
 <tr><td>Cambio condizioni economiche strutturali</td><td>AI verifica i dati macroeconomici</td><td>Valutazione caso per caso — con giustificazione pubblica</td></tr>
@@ -316,7 +316,7 @@ footer{background:var(--n);padding:2.5rem;text-align:center}
 <h2>13 — Sicurezza & Immigrazione Regolata</h2>
 <p>Il principio è semplice: ogni persona è libera di venire in Italia. Ma un sistema basato su tracciabilità, contribuzione e regole uguali per tutti non può funzionare con un'immigrazione non regolata. Non è una questione di chiusura — è una questione di coerenza del sistema. Chi viene in Italia entra in un sistema. Il sistema vale per tutti.</p>
 
-<table><tr><th>Controllo</th><th>Frequenza</th><th>Cosa verifica</th><th>Conseguenza se negativo</th></tr>
+<table style="width:100%"><tr><th>Controllo</th><th>Frequenza</th><th>Cosa verifica</th><th>Conseguenza se negativo</th></tr>
 <tr><td>Residenza effettiva</td><td class="mono">Mensile</td><td>Presenza reale sul territorio dichiarato</td><td>Avviso → 30 giorni per regolarizzare → espulsione</td></tr>
 <tr><td>Situazione economica</td><td class="mono">Mensile</td><td>Autosufficienza, reddito, nessun debito critico</td><td>Categoria A welfare per 12 mesi → poi valutazione</td></tr>
 <tr><td>Situazione fiscale</td><td class="mono">Continuo (AI)</td><td>Contribuzione regolare, nessuna evasione</td><td>Blocco del permesso di soggiorno immediato</td></tr>
@@ -324,12 +324,20 @@ footer{background:var(--n);padding:2.5rem;text-align:center}
 </table>
 
 <h3>Percorso verso la Cittadinanza</h3>
-<table><tr><th>Via</th><th>Requisiti imprescindibili</th></tr>
+<table style="width:100%"><tr><th>Via</th><th>Requisiti imprescindibili</th></tr>
 <tr><td>Matrimonio con cittadino/a italiano/a</td><td>Unione legale certificata. Nessun problema legale. Nessun problema fiscale. Verifica autenticità del vincolo (non un matrimonio di convenienza).</td></tr>
 <tr><td>Residenza e lavoro continuativi</td><td>15 anni ininterrotti sul territorio italiano. Nessun problema legale in tutto il periodo. Nessun problema fiscale. AI certifica autosufficienza economica per tutto il periodo.</td></tr>
 </table>
 
 <div class="box-b">⚖️ Le regole sono uguali per tutti. Un italiano che evade le tasse subisce le stesse conseguenze di uno straniero che evade. Un italiano che commette un reato grave subisce le stesse pene di uno straniero. Non esiste un sistema per gli italiani e uno per gli altri — esiste il sistema.</div>
+
+
+<div class="divider"></div>
+<h2>La Costituzione — Si Torna ai Fondamenti</h2>
+<p>La Costituzione del 1948 è il frutto del lavoro di persone che avevano vissuto il fascismo e volevano costruire qualcosa che non si ripetesse. È datata in alcuni aspetti tecnici — ma i suoi fondamenti sono validi e non si toccano. Nel nuovo sistema si torna a quella base, senza le stratificazioni di modifiche e interpretazioni che nel tempo l'hanno resa irriconoscibile.</p>
+<p>Il ruolo dell'AI sulla Costituzione è preciso e limitato: analizza ogni articolo per identificare ambiguità, formulazioni che si prestano a interpretazioni opposte, conflitti interni tra articoli. <strong>Segnala — non decide.</strong> La parola finale non è mai dell'AI. Non è mai dei politici di carriera. Spetta a giuristi, storici del diritto, filosofi — persone di spessore culturale e intellettuale, senza conflitti di interesse politico.</p>
+<p>Qualsiasi modifica alla Costituzione richiede un referendum popolare con quorum reale e quesito scritto in modo comprensibile per chiunque. Non basta una maggioranza parlamentare. La Costituzione appartiene ai cittadini — non al Parlamento.</p>
+<div class="box-o"><p><em>"La Costituzione non si interpreta politicamente. Si legge. E se non è chiara, la si chiarisce — non la si piega."</em></p></div>
 
 <div class="ch-nav"><a href="proiezioni.html">← 06 — Proiezioni</a><a class="home" href="index.html">⌂ Home</a><a href="riflessioni.html">Riflessioni →</a></div>
 </div>

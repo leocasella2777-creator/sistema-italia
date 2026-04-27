@@ -67,7 +67,7 @@ tr:hover td{background:rgba(26,92,56,.03)}
 .mono{font-family:'JetBrains Mono',monospace;font-size:.75rem}
 table.gold th{background:#7a5f00}
 table.blue th{background:var(--b)}
-@media(max-width:600px){table{display:block;overflow-x:auto;font-size:.78rem}}
+@media(max-width:600px){table{width:100%;font-size:.78rem}.table-wrap{overflow-x:auto;max-width:100%;-webkit-overflow-scrolling:touch}}
 
 /* BOX */
 .box-g{background:var(--v);padding:1.25rem 1.75rem;margin:1.5rem 0;border-radius:0}
@@ -215,7 +215,7 @@ canvas{max-width:100%}
   <a href="riflessioni.html">Riflessioni</a>
   <a href="principi.html">Principi</a>
   <a href="fonti.html">Fonti & WIP</a>
-  <a class="mhome" href="sistema_italia_v124.pdf" target="_blank">PDF Completo ↓</a>
+  <a class="mhome" href="sistema_italia_v137.pdf" target="_blank">PDF Completo ↓</a>
 </div>
 <div class="ch-hero">
   <div class="ch-hero-inner">
@@ -230,8 +230,8 @@ canvas{max-width:100%}
 <p>Con il debito attuale di €2.900 miliardi e €84 miliardi di interessi l'anno, molti si chiedono se sia davvero possibile risanare i conti. La risposta è sì — ma non con il sistema attuale, dove ogni anno aggiungiamo debito. Con il nuovo sistema la dinamica si inverte dal giorno uno: lo Stato smette di fare deficit e inizia a fare avanzo. Ogni anno quell'avanzo rimborsa una parte del debito. Meno debito significa meno interessi. Meno interessi significa più avanzo. Il circolo vizioso diventa circolo virtuoso.</p>
 
 <div class="kpi-grid">
-  <div class="kpi"><div class="kpi-n">-€135B</div><div class="kpi-l">Deficit transizione Anno 1</div></div>
-  <div class="kpi gold"><div class="kpi-n">Anno 18</div><div class="kpi-l">Debito = €0</div></div>
+  <div class="kpi"><div class="kpi-n">-€256B</div><div class="kpi-l">Deficit transizione Anno 1</div></div>
+  <div class="kpi gold"><div class="kpi-n">Anno 20+</div><div class="kpi-l">Debito in forte discesa</div></div>
   <div class="kpi"><div class="kpi-n">+141%</div><div class="kpi-l">PIL Anno 20</div></div>
 </div>
 
@@ -246,7 +246,7 @@ canvas{max-width:100%}
 </div>
 
 <h2>Tabella Completa Anno per Anno</h2>
-<table style="font-size:.82rem"><tr><th>Anno</th><th>PIL</th><th>Entrate</th><th>Spese totali</th><th>Saldo</th><th>Debito residuo</th><th>D/PIL</th></tr>
+<table style="font-size:.82rem;width:100%"><tr><th>Anno</th><th>PIL</th><th>Entrate</th><th>Spese totali</th><th>Saldo</th><th>Debito residuo</th><th>D/PIL</th></tr>
 <tr><td>0 (oggi)</td><td>€2.100B</td><td>€607B</td><td>€607B</td><td>€0</td><td>€2.900B</td><td>138,1%</td></tr>
 <tr><td>1</td><td>€2.194B</td><td>€618B</td><td>€594B</td><td class="good">+€24B</td><td>€2.900B</td><td>132,1%</td></tr>
 <tr><td>3</td><td>€2.396B</td><td>€640B</td><td>€570B</td><td class="good">+€70B</td><td>€2.829B</td><td>118,0%</td></tr>
@@ -275,7 +275,7 @@ canvas{max-width:100%}
 <div class="box-o"><p>"Non stiamo guardando la crescita normale di un'economia. Stiamo guardando cosa succede quando elimini il freno principale alla crescita: il debito che drena €84B l'anno fuori dall'Italia. Quella cifra, una volta liberata, moltiplica ogni altra crescita."</p></div>
 
 <h3>Parametri Dichiarati — Verifica Aperta</h3>
-<table><tr><th>Parametro</th><th>Valore</th><th>Motivazione — Fonte</th></tr>
+<table style="width:100%"><tr><th>Parametro</th><th>Valore</th><th>Motivazione — Fonte</th></tr>
 <tr><td>Crescita PIL (nuovo sistema)</td><td class="mono">4,5%/anno</td><td>vs 0,7% storico; effetto consumi incentivati + evasione eliminata + energia -70% + fiducia. ISTAT storico.</td></tr>
 <tr><td>Calo pensioni pubbliche</td><td class="mono">5%/anno</td><td>Età media pensionati ~72 anni; aspettativa vita ~83; nessun nuovo ingresso da anno 1. INPS 2023.</td></tr>
 <tr><td>Rendimento fondo pensione</td><td class="mono">3%/anno reale</td><td>Investimento prudente in titoli di Stato + infrastrutture italiane. BCE storico.</td></tr>

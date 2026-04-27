@@ -67,7 +67,7 @@ tr:hover td{background:rgba(26,92,56,.03)}
 .mono{font-family:'JetBrains Mono',monospace;font-size:.75rem}
 table.gold th{background:#7a5f00}
 table.blue th{background:var(--b)}
-@media(max-width:600px){table{display:block;overflow-x:auto;font-size:.78rem}}
+@media(max-width:600px){table{width:100%;font-size:.78rem}.table-wrap{overflow-x:auto;max-width:100%;-webkit-overflow-scrolling:touch}}
 
 /* BOX */
 .box-g{background:var(--v);padding:1.25rem 1.75rem;margin:1.5rem 0;border-radius:0}
@@ -215,7 +215,7 @@ canvas{max-width:100%}
   <a href="riflessioni.html">Riflessioni</a>
   <a href="principi.html">Principi</a>
   <a href="fonti.html">Fonti & WIP</a>
-  <a class="mhome" href="sistema_italia_v124.pdf" target="_blank">PDF Completo ↓</a>
+  <a class="mhome" href="sistema_italia_v137.pdf" target="_blank">PDF Completo ↓</a>
 </div>
 <div class="ch-hero">
   <div class="ch-hero-inner">
@@ -242,7 +242,7 @@ canvas{max-width:100%}
     <div class="pl">1° Pilastro — La Base Garantita dallo Stato</div>
     <div class="pa">€2.000</div>
     <div class="ps">al mese netti garantiti a chiunque abbia lavorato — previo versamento del minimo obbligatorio.</div>
-    <div class="pd">Versamento minimo: €850/mese<br>Età pensionabile: 58 anni<br>Copertura garantita: 25 anni (58→83)<br>Oltre 83: Fondo Garanzia Longevità<br>Se non versato: prelevato automaticamente</div>
+    <div class="pd">Versamento minimo: €975/mese<br>Età pensionabile: 58 anni<br>Copertura garantita: 25 anni (58→83)<br>Oltre 83: Fondo Garanzia Longevità<br>Se non versato: prelevato automaticamente</div>
   </div>
   <div class="pillar pillar-2">
     <div class="pl">2° Pilastro — Fondo Individuale Capitalizzato</div>
@@ -252,11 +252,11 @@ canvas{max-width:100%}
   </div>
 </div>
 
-<h3>Il Versamento Minimo — Perché €850/mese</h3>
-<p>Il calcolo è matematico e verificabile. Se versi €850/mese per 40 anni a un tasso garantito dell'1,2%, il fondo accumulato è sufficiente a erogare €2.000/mese per 25 anni (da 58 a 83). Chi vive oltre 83 anni viene coperto dal Fondo Garanzia Longevità — alimentato dal delta tra il rendimento reale del fondo (3%) e quello garantito al lavoratore (1,2%). Il 1,8% di differenza genera €8,7 miliardi all'anno che finanziano la longevità.</p>
+<h3>Il Versamento Minimo — Perché €975/mese</h3>
+<p>Il calcolo è matematico e verificabile. Se versi €975/mese per 40 anni a un tasso garantito dell'1,2%, il fondo accumulato è sufficiente a erogare €2.000/mese per 25 anni (da 58 a 83). Chi vive oltre 83 anni viene coperto dal Fondo Garanzia Longevità — alimentato dal delta tra il rendimento reale del fondo (3%) e quello garantito al lavoratore (1,2%). Il 1,8% di differenza genera €8,7 miliardi all'anno che finanziano la longevità.</p>
 
-<table><tr><th>Parametro</th><th>Valore</th><th>Logica</th></tr>
-<tr><td>Versamento minimo mensile</td><td class="mono">€850/mese</td><td>Calcolato per coprire esattamente 25 anni di €2.000/mese al 1,2%</td></tr>
+<table style="width:100%"><tr><th>Parametro</th><th>Valore</th><th>Logica</th></tr>
+<tr><td>Versamento minimo mensile</td><td class="mono">€975/mese</td><td>Calcolato per coprire esattamente 25 anni di €2.000/mese al 1,2%</td></tr>
 <tr><td>Età pensionabile</td><td class="mono">58 anni</td><td>Dopo 40 anni di lavoro a partire da 18</td></tr>
 <tr><td>Pensione minima garantita</td><td class="mono">€2.000/mese</td><td>Diritto incondizionato per chi ha versato il minimo</td></tr>
 <tr><td>Pensione massima totale</td><td class="mono">€3.000/mese</td><td>Tetto sul totale di tutte le pensioni sommate</td></tr>
@@ -274,11 +274,11 @@ canvas{max-width:100%}
 </div>
 
 <h3>Incentivi a Versare di Più del Minimo</h3>
-<p>Chi versa più di €850/mese accumula un fondo più grande. Può andare in pensione prima dei 58 anni (se il fondo copre i calcoli), lasciare più eredità ai figli, e avere una pensione più alta — fino al tetto di €3.000/mese totali. Non c'è nessun obbligo di versare solo il minimo: il minimo garantisce il diritto, il di più costruisce il futuro.</p>
+<p>Chi versa più di €975/mese accumula un fondo più grande. Può andare in pensione prima dei 58 anni (se il fondo copre i calcoli), lasciare più eredità ai figli, e avere una pensione più alta — fino al tetto di €3.000/mese totali. Non c'è nessun obbligo di versare solo il minimo: il minimo garantisce il diritto, il di più costruisce il futuro.</p>
 
-<table><tr><th>Scenario</th><th>Cosa fa</th><th>Risultato</th><th>Conveniente?</th></tr>
+<table style="width:100%"><tr><th>Scenario</th><th>Cosa fa</th><th>Risultato</th><th>Conveniente?</th></tr>
 <tr><td>Versa tutto nel fondo (oltre minimo)</td><td>Accumula più capitale</td><td>Pensione più alta o uscita anticipata</td><td>✓ Sì, se vuole più della base</td></tr>
-<tr><td>Versa il minimo (€850/mese)</td><td>Copre esattamente la base</td><td>€2.000/mese garantiti a 58 anni</td><td>✓ Sì, per chi vuole solo la garanzia</td></tr>
+<tr><td>Versa il minimo (€975/mese)</td><td>Copre esattamente la base</td><td>€2.000/mese garantiti a 58 anni</td><td>✓ Sì, per chi vuole solo la garanzia</td></tr>
 <tr><td>Non versa (non può scegliere)</td><td>Il sistema preleva automaticamente</td><td>€2.000/mese comunque a 58 anni</td><td>N/A — non è una scelta</td></tr>
 </table>
 
@@ -287,7 +287,7 @@ canvas{max-width:100%}
 <h2>Regole su Eredi e Morte</h2>
 <p>Il fondo individuale non è dell'INPS — è tuo. Alla tua morte, quello che resta nel fondo va ai tuoi eredi, nel rispetto del cap patrimoniale (€200k per erede). Non sparisce nello Stato.</p>
 
-<table><tr><th>Situazione</th><th>Chi riceve</th><th>Come</th></tr>
+<table style="width:100%"><tr><th>Situazione</th><th>Chi riceve</th><th>Come</th></tr>
 <tr><td>Morte prima della pensione</td><td>Prima il coniuge, poi i figli in parti uguali</td><td>Tutto il fondo accumulato agli eredi</td></tr>
 <tr><td>Morte dopo la pensione</td><td>Prima il coniuge, poi i figli in parti uguali</td><td>Fondo residuo agli eredi, sempre nel cap €200k/erede</td></tr>
 <tr><td>Se la quota supera il cap dell'erede</td><td>L'eccedenza va allo Stato</td><td>Non ridistribuita tra fratelli — va al Fondo di Garanzia</td></tr>
@@ -299,7 +299,7 @@ canvas{max-width:100%}
 <h2>La Transizione — Nessuno Rimane Indietro</h2>
 <p>La transizione al nuovo sistema è il nodo più critico. Non si può semplicemente azzerare 16 milioni di pensioni esistenti. La soluzione è dividere la popolazione in quattro categorie con trattamenti specifici.</p>
 
-<table><tr><th>Categoria</th><th>Chi sono</th><th>Trattamento nel nuovo sistema</th></tr>
+<table style="width:100%"><tr><th>Categoria</th><th>Chi sono</th><th>Trattamento nel nuovo sistema</th></tr>
 <tr><td><strong>A — Già in pensione</strong></td><td>~16 milioni oggi</td><td>Pensione garantita fino a morte. Tetto €3k/mese, minimo €2k. Zero tagli. Reversibilità solo al coniuge superstite.</td></tr>
 <tr><td><strong>B — Prossimi alla pensione</strong><br>(entro 10 anni)</td><td>Chi ha già maturato diritti significativi nell'INPS</td><td>Ricevono: quota INPS maturata + rendita dal fondo individuale avviato ora + base statale €2k. Garantita la continuità.</td></tr>
 <tr><td><strong>C — A metà carriera</strong><br>(20-30 anni lavorati)</td><td>Chi ha contributi INPS ma non sufficienti per pensione piena</td><td>Quota INPS proporzionale agli anni versati + fondo individuale per gli anni rimanenti + base statale. Percorso misto.</td></tr>
@@ -316,7 +316,7 @@ canvas{max-width:100%}
 <p>Le pensioni baby sono pensioni erogate prima dei 58 anni, frutto di categorie privilegiate costruite nel tempo: politici con pochi anni di mandato, dirigenti PA con uscite anticipate, categorie speciali create da chi aveva il potere di favorirsi. Nel nuovo sistema non esistono più. Nessuno riceve una pensione prima dei 58 anni. Non è una punizione — è la stessa regola che vale per tutti.</p>
 <p>Chi oggi ha una pensione baby e ha meno di 58 anni rientra nel mercato del lavoro. Ha il suo fondo pensione individuale accumulato. A 58 anni riceve la pensione normale come tutti. Il sistema lo accompagna — non lo abbandona.</p>
 
-<table><tr><th>Categoria</th><th>Situazione oggi</th><th>Nel nuovo sistema</th></tr>
+<table style="width:100%"><tr><th>Categoria</th><th>Situazione oggi</th><th>Nel nuovo sistema</th></tr>
 <tr><td>Ex parlamentari e consiglieri</td><td class="bad">~6.000 persone, pensione anche a 40 anni</td><td class="good">Azzerata. Tornano al lavoro o Cat A welfare.</td></tr>
 <tr><td>Dirigenti PA uscita anticipata</td><td class="bad">~80.000 persone</td><td class="good">Azzerata. Regola generale 58 anni.</td></tr>
 <tr><td>Militari amministrativi</td><td class="bad">~80.000 persone</td><td class="good">Azzerata. Stessa regola di tutti.</td></tr>
@@ -329,7 +329,7 @@ canvas{max-width:100%}
 <p>Chi percepisce più assegni pensionistici — pensione propria, reversibilità, pensione di categoria — non può superare il tetto di €3.000 al mese sul totale. Gli assegni si sommano. Il tetto si applica alla somma.</p>
 <p>Ma il principio non si ferma alla pensione mensile. Il cap patrimoniale vale per tutti, sempre. Se una persona accumula sul conto perché la pensione supera le sue spese mensili, scatta il cap €200k esattamente come per qualsiasi altro cittadino. Non esiste un regime speciale per i pensionati.</p>
 
-<table><tr><th>Esempio</th><th>Calcolo</th><th>Risultato</th></tr>
+<table style="width:100%"><tr><th>Esempio</th><th>Calcolo</th><th>Risultato</th></tr>
 <tr><td>Pensione propria €1.800 + reversibilità €600</td><td class="mono">€2.400 totale</td><td class="good">OK — sotto €3.000</td></tr>
 <tr><td>Pensione propria €2.500 + reversibilità €800</td><td class="mono">€3.300 totale</td><td class="bad">Tagliata a €3.000</td></tr>
 <tr><td>Pensione propria €3.500</td><td class="mono">€3.500</td><td class="bad">Tagliata a €3.000</td></tr>
@@ -352,6 +352,41 @@ canvas{max-width:100%}
 <h3>Pensioni di Invalidità — Mantenute con Verifica</h3>
 <p>Le pensioni di invalidità sono mantenute integralmente per chi ha una condizione certificata reale. È prevista una visita di conferma obbligatoria periodica. I falsi invalidi stimati dall'INPS sono circa il 15-20% dei percettori — il risparmio conservativo con la verifica è €2B/anno. Anche le pensioni di invalidità sono soggette al tetto di €3.000/mese e al cap patrimoniale €200k sul conto.</p>
 
+
+
+<div class="divider"></div>
+<h2>Pensione e Anni di Carriera</h2>
+<p>La pensione a 58 anni vale per chi ha lavorato 40 anni. Chi studia inizia tardi — il sistema si adatta automaticamente. La pensione parte quando hai accumulato il fondo necessario per €2.000 al mese per 25 anni. Non importa quanti anni ci hai messo — importa quanto hai versato.</p>
+
+<table style="width:100%"><tr><th>Anni di carriera</th><th>Età pensione</th><th>Versamento minimo</th><th>Versamento massimo utile</th><th>Caso tipico</th></tr>
+<tr><td><strong>40 anni</strong></td><td class="good"><strong>58 anni</strong></td><td>€975/mese</td><td>€1.462/mese</td><td>Inizia a 18 anni</td></tr>
+<tr><td>38 anni</td><td>60 anni</td><td>€1.039/mese</td><td>€1.559/mese</td><td>Diploma + qualche anno di studio</td></tr>
+<tr><td>35 anni</td><td>63 anni</td><td>€1.150/mese</td><td>€1.725/mese</td><td>Laurea triennale</td></tr>
+<tr><td>33 anni</td><td>65 anni</td><td>€1.236/mese</td><td>€1.853/mese</td><td>Laurea magistrale</td></tr>
+<tr><td>30 anni</td><td>68 anni</td><td>€1.385/mese</td><td>€2.078/mese</td><td>Laurea + master/specializzazione</td></tr>
+</table>
+
+<p>In ogni caso il lavoratore ha due opzioni: versare il minimo e andare in pensione all'età calcolata dal sistema, oppure versare di più e anticipare. Il sistema calcola tutto automaticamente — nessun ufficio, nessuna domanda, nessuna burocrazia.</p>
+
+<h3>Chi Non Lavora e Non Studia — Figli Over 18</h3>
+<p>Il versamento pensionistico è obbligatorio per tutti i residenti. Se un figlio maggiorenne non lavora e non studia, il versamento minimo ricade sulla famiglia. Non è una punizione — è coerenza: nessuno può arrivare alla pensione senza aver contribuito al sistema.</p>
+<p>Come funziona: il versamento viene trattenuto automaticamente dalle entrate del nucleo familiare e registrato come spesa certificata — deducibile al 100% dalla tassa residuo. Il versamento viene accreditato al conto pensione del figlio con data inizio dalla maggiore età.</p>
+<div class="box-o"><p>Eccezione: chi è certificato come studente non fa scattare l'obbligo sulla famiglia. Non esiste però la categoria "non faccio niente" — o studi, o lavori, o costa alla famiglia.</p></div>
+
+<div class="divider"></div>
+<h2>Il Fondo Garanzia Longevità — Come Cresce nel Tempo</h2>
+<p>Il Fondo di Garanzia Longevità non nasce grande — cresce nel tempo. Nei primi anni è piccolo perché i fondi individuali dei lavoratori sono appena stati avviati. Ma ogni anno i fondi individuali crescono e l'1,8% che va al fondo collettivo aumenta proporzionalmente.</p>
+
+<table style="width:100%"><tr><th>Anno</th><th>Fondi individuali totali</th><th>Entrata annua</th><th>Fondo accumulato</th><th>% spesa pensioni coperta</th></tr>
+<tr><td>Anno 0</td><td>€0</td><td>€0</td><td>€0</td><td class="bad">0%</td></tr>
+<tr><td>Anno 5</td><td>€1.564B</td><td>€28B/anno</td><td>€87B</td><td>10%</td></tr>
+<tr><td>Anno 10</td><td>€3.224B</td><td>€58B/anno</td><td>€343B</td><td>27%</td></tr>
+<tr><td>Anno 15</td><td>€4.987B</td><td>€90B/anno</td><td>€804B</td><td>53%</td></tr>
+<tr><td><strong>Anno 20</strong></td><td>€6.859B</td><td>€124B/anno</td><td>€1.513B</td><td class="good"><strong>95% — quasi autosufficiente</strong></td></tr>
+<tr><td><strong>Anno 25</strong></td><td>€8.846B</td><td>€159B/anno</td><td>€2.520B</td><td class="good"><strong>158% — supera la spesa</strong></td></tr>
+</table>
+
+<div class="box-g"><p><em>Entro l'anno 20 il Fondo di Garanzia Longevità copre il 95% della spesa pensionistica residua. Lo Stato può progressivamente smettere di finanziarle. Entro l'anno 25 il fondo è in surplus — genera più di quanto spende. Da quel momento il sistema pensionistico italiano è completamente autosufficiente, senza un euro di spesa statale.</em></p></div>
 
 <div class="ch-nav"><a href="bilancio.html">← 02 — Bilancio</a><a class="home" href="index.html">⌂ Home</a><a href="energia.html">04 — Energia →</a></div>
 </div>
