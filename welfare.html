@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="it"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Welfare & Carceri — Sistema Italia</title>
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="theme-color" content="#1a5c38">
+<link rel="manifest" href="manifest.json">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--v:#1a5c38;--vc:#2d8653;--vl:#e8f5ee;--o:#c9a84c;--ol:#fdf5e0;--r:#c0392b;--b:#2c3e7a;--n:#1a1a1a;--g:#4a4a4a;--gl:#f5f5f0;--w:#fafaf8}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Source Serif 4',Georgia,serif;background:var(--w);color:var(--n);overflow-x:hidden}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:200;background:rgba(26,92,56,.97);backdrop-filter:blur(10px);height:54px;border-bottom:2px solid var(--o);display:flex;align-items:center;justify-content:space-between;padding:0 1.5rem}
+.nav-logo{font-family:'Playfair Display',serif;font-weight:900;font-size:1rem;color:var(--o);text-decoration:none}
+.nav-right{display:flex;align-items:center;gap:.5rem}
+.nav-home{font-family:'JetBrains Mono',monospace;font-size:.65rem;color:rgba(255,255,255,.6);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;padding:.3rem .7rem;border:1px solid rgba(255,255,255,.2);transition:all .2s}
+.nav-home:hover{color:var(--o);border-color:var(--o)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:.4rem;background:none;border:none}
+.hamburger span{display:block;width:22px;height:2px;background:var(--o)}
+.mob-menu{display:none;position:fixed;top:54px;left:0;right:0;bottom:0;background:rgba(10,24,16,.98);z-index:9999;flex-direction:column;overflow-y:auto;padding:.5rem 0}
+.mob-menu a{display:block;font-family:'Source Serif 4',serif;font-size:.92rem;color:rgba(255,255,255,.75);text-decoration:none;padding:.65rem 1.5rem;border-bottom:1px solid rgba(255,255,255,.06)}
+.mob-menu a:hover{color:var(--o);background:rgba(201,168,76,.08)}
+.mob-menu .ms{font-family:'JetBrains Mono',monospace;font-size:.58rem;color:rgba(255,255,255,.3);letter-spacing:.2em;text-transform:uppercase;padding:.6rem 1.5rem .3rem;margin-top:.5rem}
+.mob-menu .mhome{color:var(--o);font-weight:700;border-top:1px solid rgba(255,255,255,.15);margin-top:.5rem}
+@media(max-width:800px){.hamburger{display:flex}}
+
+/* HERO CAPITOLO */
+.ch-hero{background:var(--v);padding:4rem 2rem 3rem;position:relative;overflow:hidden}
+.ch-hero::after{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(255,255,255,.015) 40px),repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(255,255,255,.015) 40px)}
+.ch-hero-inner{max-width:860px;margin:0 auto;position:relative;z-index:1}
+.ch-num{font-family:'JetBrains Mono',monospace;font-size:.65rem;color:var(--o);letter-spacing:.25em;text-transform:uppercase;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.ch-num::before{content:'';width:20px;height:1px;background:var(--o)}
+.ch-title{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,5vw,4rem);font-weight:900;color:white;line-height:1.1;margin-bottom:.75rem}
+.ch-title span{color:var(--o)}
+.ch-sub{font-family:'Playfair Display',serif;font-size:1.1rem;font-style:italic;color:rgba(255,255,255,.55);line-height:1.6}
+
+/* CONTENUTO */
+.content{max-width:860px;margin:0 auto;padding:3.5rem 2rem}
+h2{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.2rem);font-weight:900;color:var(--v);margin:2.5rem 0 1rem;line-height:1.2}
+h2:first-child{margin-top:0}
+h3{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--v);margin:2rem 0 .75rem}
+p{font-size:.97rem;line-height:1.85;color:var(--g);margin-bottom:1rem}
+.divider{height:2px;background:linear-gradient(90deg,var(--v),var(--o),transparent);margin:2.5rem 0}
+
+/* SEZIONI ALTERNATE */
+.sec-alt{background:var(--gl);padding:2.5rem 2rem;margin:2rem -2rem}
+.sec-dark{background:#0f1f0f;padding:2.5rem 2rem;margin:2rem -2rem}
+.sec-dark h2,.sec-dark h3{color:white}
+.sec-dark p{color:rgba(255,255,255,.65)}
+
+/* TABELLE */
+table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.86rem}
+th{background:var(--v);color:white;font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;padding:.55rem .75rem;text-align:left}
+td{padding:.55rem .75rem;border-bottom:1px solid rgba(0,0,0,.07);color:var(--g);line-height:1.5}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:rgba(26,92,56,.03)}
+.bad{color:var(--r);font-weight:700;font-family:'JetBrains Mono',monospace;font-size:.75rem}
+.good{color:var(--vc);font-weight:700;font-family:'JetBrains Mono',monospace;font-size:.75rem}
+.elim{text-decoration:line-through;color:rgba(0,0,0,.2);font-size:.72rem;font-family:'JetBrains Mono',monospace}
+.mono{font-family:'JetBrains Mono',monospace;font-size:.75rem}
+table.gold th{background:#7a5f00}
+table.blue th{background:var(--b)}
+@media(max-width:600px){table{display:block;overflow-x:auto;font-size:.78rem}}
+
+/* BOX */
+.box-g{background:var(--v);padding:1.25rem 1.75rem;margin:1.5rem 0;border-radius:0}
+.box-g p{color:white;max-width:none}
+.box-o{background:var(--ol);border-left:4px solid var(--o);padding:1.25rem 1.75rem;margin:1.5rem 0}
+.box-o p{font-style:italic;color:var(--n);max-width:none}
+.box-b{background:#eef0f8;border-left:4px solid var(--b);padding:1.25rem 1.75rem;margin:1.5rem 0;font-size:.87rem;color:var(--g);line-height:1.7}
+.box-r{background:#fdeaea;border-left:4px solid var(--r);padding:1.25rem 1.75rem;margin:1.5rem 0}
+.box-r p{color:var(--r);font-size:.9rem;line-height:1.7;max-width:none}
+
+/* CARDS */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin:1.5rem 0}
+.card{border:1px solid rgba(26,92,56,.15);padding:1.5rem;background:white;position:relative}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--v)}
+.card.gold::before{background:var(--o)}.card.blue::before{background:var(--b)}
+.card-icon{font-size:1.4rem;margin-bottom:.6rem}
+.card-title{font-family:'Playfair Display',serif;font-size:.97rem;font-weight:700;color:var(--v);margin-bottom:.5rem}
+.card.gold .card-title{color:#7a5f00}.card.blue .card-title{color:var(--b)}
+.card-text{font-size:.83rem;line-height:1.65;color:var(--g)}
+@media(max-width:600px){.cards{grid-template-columns:1fr}}
+
+/* COMPARE */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin:1.5rem 0;background:rgba(0,0,0,.06)}
+.col{padding:1.5rem;background:white}
+.col.oggi{border-top:4px solid var(--r)}.col.nuovo{border-top:4px solid var(--v)}
+.col-head{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;margin-bottom:1rem}
+.oggi .col-head{color:var(--r)}.nuovo .col-head{color:var(--v)}
+@media(max-width:600px){.compare{grid-template-columns:1fr}}
+
+/* PILLARS */
+.pillars{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin:1.5rem 0}
+.pillar{padding:1.75rem;border:1px solid rgba(0,0,0,.1)}
+.pillar-1{background:var(--vl);border-color:var(--v)}
+.pillar-2{background:var(--ol);border-color:var(--o)}
+.pl{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;margin-bottom:.6rem}
+.pillar-1 .pl{color:var(--v)}.pillar-2 .pl{color:#7a5f00}
+.pa{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;line-height:1;margin-bottom:.4rem}
+.pillar-1 .pa{color:var(--v)}.pillar-2 .pa{color:#7a5f00}
+.ps{font-size:.83rem;color:var(--g);line-height:1.6}
+.pd{margin-top:.75rem;padding-top:.75rem;border-top:1px solid rgba(0,0,0,.1);font-family:'JetBrains Mono',monospace;font-size:.65rem;color:var(--g);line-height:1.7}
+@media(max-width:600px){.pillars{grid-template-columns:1fr}}
+
+/* BULLETS */
+ul.bl{margin:1rem 0 1.5rem;padding-left:0;list-style:none}
+ul.bl li{padding:.35rem 0 .35rem 1.5rem;position:relative;font-size:.9rem;line-height:1.6;color:var(--g);border-bottom:1px solid rgba(0,0,0,.05)}
+ul.bl li:last-child{border-bottom:none}
+ul.bl li::before{content:'→';position:absolute;left:0;color:var(--o);font-size:.78rem}
+
+/* QUOTE */
+.quote{background:var(--ol);border-left:5px solid var(--o);padding:1.5rem 2rem;margin:2rem 0}
+.qt{font-family:'Playfair Display',serif;font-size:1.25rem;font-style:italic;line-height:1.5;color:var(--n)}
+.qa{font-family:'JetBrains Mono',monospace;font-size:.6rem;color:var(--o);letter-spacing:.1em;text-transform:uppercase;margin-top:.75rem}
+
+/* OBIEZIONI */
+.obj{border:1px solid rgba(0,0,0,.1);margin-bottom:1.25rem}
+.obj-q{background:var(--n);padding:.9rem 1.5rem;font-family:'Playfair Display',serif;font-size:.97rem;font-weight:700;color:var(--o);cursor:pointer;display:flex;justify-content:space-between;align-items:center;width:100%;text-align:left;border:none}
+.obj-q::after{content:'＋';font-size:1rem;transition:transform .3s}
+.obj-q.open::after{transform:rotate(45deg)}
+.obj-a{display:none;padding:1.25rem 1.5rem;background:white;font-size:.9rem;line-height:1.75;color:var(--g)}
+.obj-a.open{display:block}
+
+/* NUMS */
+.nums{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.1);margin:2rem 0}
+.num{background:rgba(0,0,0,.2);padding:1.75rem 1.25rem;text-align:center}
+.num-v{font-family:'Playfair Display',serif;font-size:1.9rem;font-weight:900;color:var(--o);line-height:1;margin-bottom:.4rem}
+.num-l{font-family:'JetBrains Mono',monospace;font-size:.56rem;color:rgba(255,255,255,.45);letter-spacing:.08em;text-transform:uppercase;line-height:1.5}
+.num-s{font-size:.68rem;color:rgba(255,255,255,.22);font-style:italic;margin-top:.2rem}
+@media(max-width:600px){.nums{grid-template-columns:1fr 1fr}}
+
+/* TIMELINE */
+.tl{margin:2rem 0}
+.tl-item{display:grid;grid-template-columns:65px 1fr;gap:1rem;margin-bottom:1.1rem;align-items:start}
+.tl-y{font-family:'JetBrains Mono',monospace;font-size:.68rem;font-weight:700;color:var(--o);text-align:right;padding-top:.12rem}
+.tl-bar{height:4px;border-radius:2px;margin-bottom:.3rem}
+.tl-t{font-size:.8rem;color:rgba(255,255,255,.55);line-height:1.5}
+.tl-t strong{color:var(--o)}
+.tl-badge{background:var(--o);color:var(--v);display:inline-block;padding:.12rem .45rem;font-family:'JetBrains Mono',monospace;font-size:.56rem;font-weight:700;text-transform:uppercase;margin-top:.2rem}
+
+/* PRINCIPI */
+.prin{display:grid;grid-template-columns:2.25rem 1fr;gap:1.1rem;align-items:start;padding:1.25rem 0;border-bottom:1px solid rgba(0,0,0,.07)}
+.prin:last-child{border-bottom:none}
+.prin-n{font-family:'JetBrains Mono',monospace;font-size:.62rem;color:var(--o);font-weight:700;padding-top:.12rem}
+.prin-t{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--v);margin-bottom:.25rem}
+.prin-x{font-size:.88rem;line-height:1.65;color:var(--g)}
+
+/* NAV CAPITOLI */
+.ch-nav{display:flex;justify-content:space-between;align-items:center;padding:2rem;border-top:2px solid rgba(0,0,0,.08);margin-top:1rem;gap:1rem}
+.ch-nav a{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--v);text-decoration:none;letter-spacing:.05em;padding:.6rem 1.2rem;border:1px solid var(--v);transition:all .2s;flex:1;text-align:center}
+.ch-nav a:hover{background:var(--v);color:white}
+.ch-nav a.home{background:var(--o);color:var(--v);border-color:var(--o);font-weight:700;flex:0}
+.ch-nav a.home:hover{background:var(--v);color:white;border-color:var(--v)}
+
+/* FOOTER */
+footer{background:var(--n);padding:2.5rem;text-align:center}
+.ft-logo{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:900;color:var(--o);margin-bottom:.4rem}
+.ft-sub{font-family:'JetBrains Mono',monospace;font-size:.6rem;color:rgba(255,255,255,.3);letter-spacing:.15em;text-transform:uppercase;margin-bottom:1rem}
+.ft-note{font-size:.78rem;color:rgba(255,255,255,.22);font-style:italic;max-width:480px;margin:0 auto;line-height:1.6}
+.scroll-top{position:fixed;bottom:1.5rem;right:1.5rem;background:var(--v);color:var(--o);border:none;width:40px;height:40px;cursor:pointer;font-size:1rem;display:none;z-index:100}
+
+@media(max-width:600px){
+  .content{padding:2.5rem 1.25rem}
+  .sec-alt,.sec-dark{margin:2rem -1.25rem;padding:2rem 1.25rem}
+  .ch-nav{flex-direction:column}
+  .ch-nav a{text-align:center}
+}
+</style><style>
+.chart-wrap{background:white;border:1px solid rgba(0,0,0,.08);padding:1.5rem;margin:1.5rem 0}
+.chart-title{font-family:'JetBrains Mono',monospace;font-size:.65rem;color:var(--v);letter-spacing:.12em;text-transform:uppercase;margin-bottom:1rem}
+.kpi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.5rem 0}
+.kpi{background:var(--gl);padding:1.25rem;text-align:center;border-top:3px solid var(--v)}
+.kpi.gold{border-top-color:var(--o)}.kpi.red{border-top-color:var(--r)}
+.kpi-n{font-family:'Playfair Display',serif;font-size:1.9rem;font-weight:900;color:var(--v);line-height:1;margin-bottom:.3rem}
+.kpi.gold .kpi-n{color:#7a5f00}.kpi.red .kpi-n{color:var(--r)}
+.kpi-l{font-family:'JetBrains Mono',monospace;font-size:.6rem;color:var(--g);letter-spacing:.08em;text-transform:uppercase}
+@media(max-width:600px){.kpi-grid{grid-template-columns:1fr 1fr}}
+</style><script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+</head><body>
+<nav>
+  <a class="nav-logo" href="index.html">Sistema Italia</a>
+  <div class="nav-right">
+    <a class="nav-home" href="index.html">Home</a>
+    <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mob-menu" id="mm">
+  <div class="ms">Naviga</div>
+  <a href="prefazione.html">Prefazione</a>
+<a href="fiscale.html">01 — Fiscale</a>
+<a href="bilancio.html">02 — Bilancio</a>
+<a href="pensioni.html">03 — Pensioni</a>
+<a href="energia.html">04 — Energia</a>
+<a href="proiezioni.html">06 — Proiezioni</a>
+<a href="politica.html">07-13 — Politica</a>
+<a href="riflessioni.html">Riflessioni</a>
+<a href="principi.html">Principi</a>
+<a href="fonti.html">Fonti & WIP</a>
+  <a class="mhome" href="./sistema_italia_v119.pdf" target="_blank">PDF Completo ↓</a>
+</div>
+<div class="ch-hero"><div class="ch-hero-inner">
+  <div class="ch-num">05 — Sistema Economico</div>
+  <h1 class="ch-title">Welfare, Carceri &amp; Sanzioni</h1>
+  <p class="ch-sub">Nessuno invisibile. Carceri produttive. Criminalità -60%.</p>
+</div></div>
+<div class="content">
+
+<h2>Il Welfare Attuale Crea Dipendenza Invece di Autonomia.</h2>
+<p>Si dà un sussidio a chi non lavora, senza chiedersi perché non lavora e senza aiutarlo a tornare a lavorare. Il risultato è che molte persone restano nel sistema per anni — non per malizia, ma perché nessuno ha investito nel renderle autonome. È una trappola per tutti: per lo Stato che spende, per il cittadino che non cresce.</p>
+<p>Il nuovo sistema parte da una distinzione semplice e onesta: c'è chi non lavora perché non può — malattia, disabilità, condizione che non dipende da lui. E c'è chi non lavora perché il sistema non lo ha aiutato a trovare il modo. I due casi non sono uguali e non si gestiscono allo stesso modo.</p>
+
+<table><tr><th>Categoria</th><th>Chi sono</th><th>Gestione dettagliata</th></tr>
+<tr><td><strong style="color:var(--v)">A — Disoccupato</strong></td><td>Chi non trova lavoro per mancanza di opportunità o competenze</td><td>Formazione obbligatoria + tirocini pagati + sussidio temporaneo. Seguito attivamente: non lasciato solo. Entro 12 mesi: o si reinserisce o viene valutato per B o C. Nessuna proroga automatica — ogni proroga richiede rivalutazione documentata.</td></tr>
+<tr><td><strong style="color:#7a5f00">B — Incapace certificato</strong></td><td>Malattia, disabilità certificata, condizione permanente documentata</td><td>Certificazione medica obbligatoria + rivalutazione periodica. Reddito garantito €2.000/mese + casa popolare. Nessun obbligo lavorativo finché la condizione persiste. Se in futuro risulta capace, torna al punto A con percorso da 12 mesi. Se risulta malafede: passa direttamente a C.</td></tr>
+<tr><td><strong style="color:var(--r)">C — Malafede / nullafacente</strong></td><td>Chi è in malafede o rifiuta qualsiasi integrazione senza condizioni certificate</td><td>Sequestro immediato dei beni. Sorvegliato per 10 anni. Perde tutti i benefici. Integrato nel sistema lavoro obbligatorio — stesso modello carceri produttive: lavora per la società, impara un mestiere, diventa utile invece di restare a carico.</td></tr>
+</table>
+
+<div class="divider"></div>
+
+<h2>Carceri Produttive + Sistema Sanzionatorio</h2>
+<p>Oggi il carcere è un parcheggio. Il detenuto entra, aspetta, esce. Il 70% torna a delinquere entro sette anni. Non perché le persone siano irrecuperabili — ma perché il carcere non insegna nulla, non dà nessuna prospettiva. È costoso (€130/giorno per detenuto), inefficace, e produce recidivi. È un fallimento su tutti i fronti.</p>
+<p>Nel nuovo sistema le carceri diventano laboratori, officine, aziende agricole, centri di servizi. Il detenuto impara un mestiere reale, contribuisce a produrre valore, costruisce un curriculum. All'uscita ha competenze spendibili. Il carcere si paga parzialmente da solo. La recidiva crolla.</p>
+
+<table><tr><th>Aspetto</th><th>Sistema Attuale</th><th>Nuovo Sistema</th></tr>
+<tr><td>Attività in carcere</td><td class="bad">Attesa. Nessun obbligo lavorativo.</td><td class="good">Lavoro produttivo obbligatorio. Scelta del mestiere tra quelli disponibili.</td></tr>
+<tr><td>Costo per detenuto</td><td class="bad">€130/giorno — tutto a carico dello Stato</td><td class="good">Ridotto: il lavoro del detenuto copre parte del costo</td></tr>
+<tr><td>Recidiva dopo uscita</td><td class="bad">70% entro 7 anni</td><td class="good">Stima: ~25% (-64%) grazie a competenze e prospettiva</td></tr>
+<tr><td>Uscita dal carcere</td><td class="bad">Senza curriculum, senza skills</td><td class="good">Con certificazione di mestiere + eventuale contratto già in mano</td></tr>
+</table>
+
+<h3>Proiezioni sulla Criminalità</h3>
+<p>La maggior parte della piccola criminalità ha radici economiche: povertà, mancanza di prospettive, impossibilità di costruire un futuro legale. Eliminando la povertà strutturale il sistema elimina la sua causa principale — non i sintomi.</p>
+
+<table><tr><th>Tipo di crimine</th><th>Oggi</th><th>Proiezione anno 10</th><th>Motivo principale</th></tr>
+<tr><td>Furti e piccola delinquenza</td><td class="bad">1.200.000/anno</td><td class="good">~480.000 (-60%)</td><td>Povertà strutturale eliminata. Nessuno ruba per fame.</td></tr>
+<tr><td>Truffe e frodi fiscali</td><td class="bad">180.000/anno</td><td class="good">~36.000 (-80%)</td><td>Sistema fiscale trasparente. Il nero non conviene più.</td></tr>
+<tr><td>Recidiva carceraria</td><td class="bad">70% entro 7 anni</td><td class="good">~25% (-64%)</td><td>Carceri produttive + mestiere + prospettiva reale.</td></tr>
+<tr><td>Detenuti in carcere</td><td class="bad">54.000 (sovraffollamento)</td><td class="good">~30.000 (stima)</td><td>Meno crimini + meno recidiva = meno ingressi</td></tr>
+<tr><td>Costo sistema carcerario</td><td class="bad">~€2,5B/anno</td><td class="good">~€1,2B/anno (-52%)</td><td>Meno detenuti + carceri produttive si autofinanziano parzialmente</td></tr>
+</table>
+
+<div class="box-r"><p><strong>Criminalità organizzata — Risposta proporzionata:</strong><br>
+La criminalità organizzata non è delinquenza comune. È un sistema parallelo con economia, territorio e potere propri. La risposta deve essere proporzionata:<br>
+— Esercito per il controllo del territorio nelle zone controllate dalla criminalità<br>
+— Sequestro totale di tutti i beni — niente che resti ai familiari<br>
+— Abbattimento degli edifici che non possono essere riutilizzati e sono simbolo del potere criminale<br>
+— Chi abita quegli edifici per intimidazione: protezione statale garantita e ricollocazione<br>
+Non si lascia in piedi un simbolo del potere criminale.</p></div>
+
+<div class="ch-nav"><a href="energia.html">← ← 04 Energia</a><a class="home" href="index.html">⌂ Home</a><a href="proiezioni.html">06 — Proiezioni →</a></div>
+</div>
+<footer><div class="ft-logo">Sistema Italia</div>
+  <div class="ft-sub">Leonardo Casella · Aprile 2026 · v1.0</div>
+  <div class="ft-note">Tutti i numeri sono calcolati su fonti ufficiali (ISTAT, MEF, INPS, Banca d'Italia).</div>
+</footer><button class="scroll-top" id="st" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<script>
+function toggleMenu(){var m=document.getElementById('mm');m.style.display=m.style.display==='flex'?'none':'flex';}
+window.addEventListener('scroll',function(){var b=document.getElementById('st');if(b)b.style.display=window.scrollY>300?'block':'none';},{passive:true});
+document.querySelectorAll && document.querySelectorAll('.obj-q').forEach(function(q){
+  q.addEventListener('click',function(){q.classList.toggle('open');q.nextElementSibling.classList.toggle('open');});
+});
+</script>
+</body></html>

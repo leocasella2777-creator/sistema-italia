@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="it"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fonti & Metodologia — Sistema Italia</title>
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="theme-color" content="#1a5c38">
+<link rel="manifest" href="manifest.json">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--v:#1a5c38;--vc:#2d8653;--vl:#e8f5ee;--o:#c9a84c;--ol:#fdf5e0;--r:#c0392b;--b:#2c3e7a;--n:#1a1a1a;--g:#4a4a4a;--gl:#f5f5f0;--w:#fafaf8}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Source Serif 4',Georgia,serif;background:var(--w);color:var(--n);overflow-x:hidden}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:200;background:rgba(26,92,56,.97);backdrop-filter:blur(10px);height:54px;border-bottom:2px solid var(--o);display:flex;align-items:center;justify-content:space-between;padding:0 1.5rem}
+.nav-logo{font-family:'Playfair Display',serif;font-weight:900;font-size:1rem;color:var(--o);text-decoration:none}
+.nav-right{display:flex;align-items:center;gap:.5rem}
+.nav-home{font-family:'JetBrains Mono',monospace;font-size:.65rem;color:rgba(255,255,255,.6);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;padding:.3rem .7rem;border:1px solid rgba(255,255,255,.2);transition:all .2s}
+.nav-home:hover{color:var(--o);border-color:var(--o)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:.4rem;background:none;border:none}
+.hamburger span{display:block;width:22px;height:2px;background:var(--o)}
+.mob-menu{display:none;position:fixed;top:54px;left:0;right:0;bottom:0;background:rgba(10,24,16,.98);z-index:9999;flex-direction:column;overflow-y:auto;padding:.5rem 0}
+.mob-menu a{display:block;font-family:'Source Serif 4',serif;font-size:.92rem;color:rgba(255,255,255,.75);text-decoration:none;padding:.65rem 1.5rem;border-bottom:1px solid rgba(255,255,255,.06)}
+.mob-menu a:hover{color:var(--o);background:rgba(201,168,76,.08)}
+.mob-menu .ms{font-family:'JetBrains Mono',monospace;font-size:.58rem;color:rgba(255,255,255,.3);letter-spacing:.2em;text-transform:uppercase;padding:.6rem 1.5rem .3rem;margin-top:.5rem}
+.mob-menu .mhome{color:var(--o);font-weight:700;border-top:1px solid rgba(255,255,255,.15);margin-top:.5rem}
+@media(max-width:800px){.hamburger{display:flex}}
+
+/* HERO CAPITOLO */
+.ch-hero{background:var(--v);padding:4rem 2rem 3rem;position:relative;overflow:hidden}
+.ch-hero::after{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(255,255,255,.015) 40px),repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(255,255,255,.015) 40px)}
+.ch-hero-inner{max-width:860px;margin:0 auto;position:relative;z-index:1}
+.ch-num{font-family:'JetBrains Mono',monospace;font-size:.65rem;color:var(--o);letter-spacing:.25em;text-transform:uppercase;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.ch-num::before{content:'';width:20px;height:1px;background:var(--o)}
+.ch-title{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,5vw,4rem);font-weight:900;color:white;line-height:1.1;margin-bottom:.75rem}
+.ch-title span{color:var(--o)}
+.ch-sub{font-family:'Playfair Display',serif;font-size:1.1rem;font-style:italic;color:rgba(255,255,255,.55);line-height:1.6}
+
+/* CONTENUTO */
+.content{max-width:860px;margin:0 auto;padding:3.5rem 2rem}
+h2{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.2rem);font-weight:900;color:var(--v);margin:2.5rem 0 1rem;line-height:1.2}
+h2:first-child{margin-top:0}
+h3{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--v);margin:2rem 0 .75rem}
+p{font-size:.97rem;line-height:1.85;color:var(--g);margin-bottom:1rem}
+.divider{height:2px;background:linear-gradient(90deg,var(--v),var(--o),transparent);margin:2.5rem 0}
+
+/* SEZIONI ALTERNATE */
+.sec-alt{background:var(--gl);padding:2.5rem 2rem;margin:2rem -2rem}
+.sec-dark{background:#0f1f0f;padding:2.5rem 2rem;margin:2rem -2rem}
+.sec-dark h2,.sec-dark h3{color:white}
+.sec-dark p{color:rgba(255,255,255,.65)}
+
+/* TABELLE */
+table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.86rem}
+th{background:var(--v);color:white;font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;padding:.55rem .75rem;text-align:left}
+td{padding:.55rem .75rem;border-bottom:1px solid rgba(0,0,0,.07);color:var(--g);line-height:1.5}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:rgba(26,92,56,.03)}
+.bad{color:var(--r);font-weight:700;font-family:'JetBrains Mono',monospace;font-size:.75rem}
+.good{color:var(--vc);font-weight:700;font-family:'JetBrains Mono',monospace;font-size:.75rem}
+.elim{text-decoration:line-through;color:rgba(0,0,0,.2);font-size:.72rem;font-family:'JetBrains Mono',monospace}
+.mono{font-family:'JetBrains Mono',monospace;font-size:.75rem}
+table.gold th{background:#7a5f00}
+table.blue th{background:var(--b)}
+@media(max-width:600px){table{display:block;overflow-x:auto;font-size:.78rem}}
+
+/* BOX */
+.box-g{background:var(--v);padding:1.25rem 1.75rem;margin:1.5rem 0;border-radius:0}
+.box-g p{color:white;max-width:none}
+.box-o{background:var(--ol);border-left:4px solid var(--o);padding:1.25rem 1.75rem;margin:1.5rem 0}
+.box-o p{font-style:italic;color:var(--n);max-width:none}
+.box-b{background:#eef0f8;border-left:4px solid var(--b);padding:1.25rem 1.75rem;margin:1.5rem 0;font-size:.87rem;color:var(--g);line-height:1.7}
+.box-r{background:#fdeaea;border-left:4px solid var(--r);padding:1.25rem 1.75rem;margin:1.5rem 0}
+.box-r p{color:var(--r);font-size:.9rem;line-height:1.7;max-width:none}
+
+/* CARDS */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin:1.5rem 0}
+.card{border:1px solid rgba(26,92,56,.15);padding:1.5rem;background:white;position:relative}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--v)}
+.card.gold::before{background:var(--o)}.card.blue::before{background:var(--b)}
+.card-icon{font-size:1.4rem;margin-bottom:.6rem}
+.card-title{font-family:'Playfair Display',serif;font-size:.97rem;font-weight:700;color:var(--v);margin-bottom:.5rem}
+.card.gold .card-title{color:#7a5f00}.card.blue .card-title{color:var(--b)}
+.card-text{font-size:.83rem;line-height:1.65;color:var(--g)}
+@media(max-width:600px){.cards{grid-template-columns:1fr}}
+
+/* COMPARE */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin:1.5rem 0;background:rgba(0,0,0,.06)}
+.col{padding:1.5rem;background:white}
+.col.oggi{border-top:4px solid var(--r)}.col.nuovo{border-top:4px solid var(--v)}
+.col-head{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;margin-bottom:1rem}
+.oggi .col-head{color:var(--r)}.nuovo .col-head{color:var(--v)}
+@media(max-width:600px){.compare{grid-template-columns:1fr}}
+
+/* PILLARS */
+.pillars{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin:1.5rem 0}
+.pillar{padding:1.75rem;border:1px solid rgba(0,0,0,.1)}
+.pillar-1{background:var(--vl);border-color:var(--v)}
+.pillar-2{background:var(--ol);border-color:var(--o)}
+.pl{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;margin-bottom:.6rem}
+.pillar-1 .pl{color:var(--v)}.pillar-2 .pl{color:#7a5f00}
+.pa{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;line-height:1;margin-bottom:.4rem}
+.pillar-1 .pa{color:var(--v)}.pillar-2 .pa{color:#7a5f00}
+.ps{font-size:.83rem;color:var(--g);line-height:1.6}
+.pd{margin-top:.75rem;padding-top:.75rem;border-top:1px solid rgba(0,0,0,.1);font-family:'JetBrains Mono',monospace;font-size:.65rem;color:var(--g);line-height:1.7}
+@media(max-width:600px){.pillars{grid-template-columns:1fr}}
+
+/* BULLETS */
+ul.bl{margin:1rem 0 1.5rem;padding-left:0;list-style:none}
+ul.bl li{padding:.35rem 0 .35rem 1.5rem;position:relative;font-size:.9rem;line-height:1.6;color:var(--g);border-bottom:1px solid rgba(0,0,0,.05)}
+ul.bl li:last-child{border-bottom:none}
+ul.bl li::before{content:'→';position:absolute;left:0;color:var(--o);font-size:.78rem}
+
+/* QUOTE */
+.quote{background:var(--ol);border-left:5px solid var(--o);padding:1.5rem 2rem;margin:2rem 0}
+.qt{font-family:'Playfair Display',serif;font-size:1.25rem;font-style:italic;line-height:1.5;color:var(--n)}
+.qa{font-family:'JetBrains Mono',monospace;font-size:.6rem;color:var(--o);letter-spacing:.1em;text-transform:uppercase;margin-top:.75rem}
+
+/* OBIEZIONI */
+.obj{border:1px solid rgba(0,0,0,.1);margin-bottom:1.25rem}
+.obj-q{background:var(--n);padding:.9rem 1.5rem;font-family:'Playfair Display',serif;font-size:.97rem;font-weight:700;color:var(--o);cursor:pointer;display:flex;justify-content:space-between;align-items:center;width:100%;text-align:left;border:none}
+.obj-q::after{content:'＋';font-size:1rem;transition:transform .3s}
+.obj-q.open::after{transform:rotate(45deg)}
+.obj-a{display:none;padding:1.25rem 1.5rem;background:white;font-size:.9rem;line-height:1.75;color:var(--g)}
+.obj-a.open{display:block}
+
+/* NUMS */
+.nums{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.1);margin:2rem 0}
+.num{background:rgba(0,0,0,.2);padding:1.75rem 1.25rem;text-align:center}
+.num-v{font-family:'Playfair Display',serif;font-size:1.9rem;font-weight:900;color:var(--o);line-height:1;margin-bottom:.4rem}
+.num-l{font-family:'JetBrains Mono',monospace;font-size:.56rem;color:rgba(255,255,255,.45);letter-spacing:.08em;text-transform:uppercase;line-height:1.5}
+.num-s{font-size:.68rem;color:rgba(255,255,255,.22);font-style:italic;margin-top:.2rem}
+@media(max-width:600px){.nums{grid-template-columns:1fr 1fr}}
+
+/* TIMELINE */
+.tl{margin:2rem 0}
+.tl-item{display:grid;grid-template-columns:65px 1fr;gap:1rem;margin-bottom:1.1rem;align-items:start}
+.tl-y{font-family:'JetBrains Mono',monospace;font-size:.68rem;font-weight:700;color:var(--o);text-align:right;padding-top:.12rem}
+.tl-bar{height:4px;border-radius:2px;margin-bottom:.3rem}
+.tl-t{font-size:.8rem;color:rgba(255,255,255,.55);line-height:1.5}
+.tl-t strong{color:var(--o)}
+.tl-badge{background:var(--o);color:var(--v);display:inline-block;padding:.12rem .45rem;font-family:'JetBrains Mono',monospace;font-size:.56rem;font-weight:700;text-transform:uppercase;margin-top:.2rem}
+
+/* PRINCIPI */
+.prin{display:grid;grid-template-columns:2.25rem 1fr;gap:1.1rem;align-items:start;padding:1.25rem 0;border-bottom:1px solid rgba(0,0,0,.07)}
+.prin:last-child{border-bottom:none}
+.prin-n{font-family:'JetBrains Mono',monospace;font-size:.62rem;color:var(--o);font-weight:700;padding-top:.12rem}
+.prin-t{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--v);margin-bottom:.25rem}
+.prin-x{font-size:.88rem;line-height:1.65;color:var(--g)}
+
+/* NAV CAPITOLI */
+.ch-nav{display:flex;justify-content:space-between;align-items:center;padding:2rem;border-top:2px solid rgba(0,0,0,.08);margin-top:1rem;gap:1rem}
+.ch-nav a{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--v);text-decoration:none;letter-spacing:.05em;padding:.6rem 1.2rem;border:1px solid var(--v);transition:all .2s;flex:1;text-align:center}
+.ch-nav a:hover{background:var(--v);color:white}
+.ch-nav a.home{background:var(--o);color:var(--v);border-color:var(--o);font-weight:700;flex:0}
+.ch-nav a.home:hover{background:var(--v);color:white;border-color:var(--v)}
+
+/* FOOTER */
+footer{background:var(--n);padding:2.5rem;text-align:center}
+.ft-logo{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:900;color:var(--o);margin-bottom:.4rem}
+.ft-sub{font-family:'JetBrains Mono',monospace;font-size:.6rem;color:rgba(255,255,255,.3);letter-spacing:.15em;text-transform:uppercase;margin-bottom:1rem}
+.ft-note{font-size:.78rem;color:rgba(255,255,255,.22);font-style:italic;max-width:480px;margin:0 auto;line-height:1.6}
+.scroll-top{position:fixed;bottom:1.5rem;right:1.5rem;background:var(--v);color:var(--o);border:none;width:40px;height:40px;cursor:pointer;font-size:1rem;display:none;z-index:100}
+
+@media(max-width:600px){
+  .content{padding:2.5rem 1.25rem}
+  .sec-alt,.sec-dark{margin:2rem -1.25rem;padding:2rem 1.25rem}
+  .ch-nav{flex-direction:column}
+  .ch-nav a{text-align:center}
+}
+</style><style>
+.chart-wrap{background:white;border:1px solid rgba(0,0,0,.08);padding:1.5rem;margin:1.5rem 0}
+.chart-title{font-family:'JetBrains Mono',monospace;font-size:.65rem;color:var(--v);letter-spacing:.12em;text-transform:uppercase;margin-bottom:1rem}
+.kpi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.5rem 0}
+.kpi{background:var(--gl);padding:1.25rem;text-align:center;border-top:3px solid var(--v)}
+.kpi.gold{border-top-color:var(--o)}.kpi.red{border-top-color:var(--r)}
+.kpi-n{font-family:'Playfair Display',serif;font-size:1.9rem;font-weight:900;color:var(--v);line-height:1;margin-bottom:.3rem}
+.kpi.gold .kpi-n{color:#7a5f00}.kpi.red .kpi-n{color:var(--r)}
+.kpi-l{font-family:'JetBrains Mono',monospace;font-size:.6rem;color:var(--g);letter-spacing:.08em;text-transform:uppercase}
+@media(max-width:600px){.kpi-grid{grid-template-columns:1fr 1fr}}
+</style><script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+</head><body>
+<nav>
+  <a class="nav-logo" href="index.html">Sistema Italia</a>
+  <div class="nav-right">
+    <a class="nav-home" href="index.html">Home</a>
+    <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mob-menu" id="mm">
+  <div class="ms">Naviga</div>
+  <a href="prefazione.html">Prefazione</a>
+<a href="fiscale.html">01 — Fiscale</a>
+<a href="bilancio.html">02 — Bilancio</a>
+<a href="pensioni.html">03 — Pensioni</a>
+<a href="energia.html">04 — Energia</a>
+<a href="welfare.html">05 — Welfare</a>
+<a href="proiezioni.html">06 — Proiezioni</a>
+<a href="politica.html">07-13 — Politica</a>
+<a href="riflessioni.html">Riflessioni</a>
+<a href="principi.html">Principi</a>
+  <a class="mhome" href="./sistema_italia_v119.pdf" target="_blank">PDF Completo ↓</a>
+</div>
+<div class="ch-hero"><div class="ch-hero-inner">
+  <div class="ch-num">Appendice</div>
+  <h1 class="ch-title">Fonti, Metodologia &amp; Work in Progress</h1>
+  <p class="ch-sub">Tutti i dati verificabili. Parametri dichiarati. Capitoli futuri.</p>
+</div></div>
+<div class="content">
+
+<h2>Tutti i Dati Verificabili. Chiunque Può Contestarli.</h2>
+<p>Tutti i dati utilizzati nelle simulazioni provengono da fonti ufficiali italiane ed europee. Le proiezioni sono modelli semplificati basati su questi dati reali — le assunzioni principali sono indicate per ogni voce. Chiunque voglia contestare un numero può farlo portando dati alternativi: è esattamente il tipo di contributo che questo sistema accoglie. Se esiste un dato migliore, si usa quello.</p>
+
+<table><tr><th>Dato</th><th>Valore usato</th><th>Fonte — Anno</th></tr>
+<tr><td>PIL Italia</td><td class="mono">€2.100 miliardi</td><td>ISTAT — Conti Nazionali — 2023</td></tr>
+<tr><td>Debito pubblico</td><td class="mono">€2.900 miliardi</td><td>Banca d'Italia / MEF — 2023</td></tr>
+<tr><td>Deficit annuo</td><td class="mono">€90 miliardi</td><td>MEF — Legge di Bilancio — 2024</td></tr>
+<tr><td>Gettito IRPEF</td><td class="mono">€198 miliardi</td><td>MEF — Relazione Entrate — 2023</td></tr>
+<tr><td>Gettito IVA</td><td class="mono">€175 miliardi</td><td>MEF — Relazione Entrate — 2023</td></tr>
+<tr><td>Contributi previdenziali</td><td class="mono">€250 miliardi</td><td>INPS — Bilancio Sociale — 2023</td></tr>
+<tr><td>Spesa pensionistica</td><td class="mono">€297 miliardi</td><td>INPS — Relazione Annuale — 2023</td></tr>
+<tr><td>Evasione fiscale stimata</td><td class="mono">€90 miliardi</td><td>MEF — Economia non osservata — 2023</td></tr>
+<tr><td>Corruzione stimata</td><td class="mono">€237 miliardi</td><td>Corte dei Conti — Relazione — 2023</td></tr>
+<tr><td>Riserva aurea italiana</td><td class="mono">2.452 tonnellate (~€213B)</td><td>Banca d'Italia — Riserve ufficiali — apr 2024</td></tr>
+<tr><td>Rapporto Debito/PIL</td><td class="mono">138%</td><td>Eurostat — 2023</td></tr>
+<tr><td>Lavoratori occupati</td><td class="mono">~23 milioni</td><td>ISTAT — Rilevazione forze lavoro — 2023</td></tr>
+<tr><td>Analfabetismo funzionale</td><td class="mono">28-35% adulti</td><td>OCSE — PIAAC Survey — 2023</td></tr>
+<tr><td>Detenuti in Italia</td><td class="mono">54.000</td><td>DAP — Dipartimento Amm. Penitenziaria — 2023</td></tr>
+<tr><td>Costo medio detenuto</td><td class="mono">€130/giorno</td><td>DAP — Relazione al Parlamento — 2023</td></tr>
+<tr><td>Recidiva carceraria</td><td class="mono">~70% entro 7 anni</td><td>Ministero della Giustizia — 2022</td></tr>
+<tr><td>Tasso natalità</td><td class="mono">1,24 figli per donna</td><td>ISTAT — Indicatori demografici — 2023</td></tr>
+<tr><td>Consumo gas naturale</td><td class="mono">~70 miliardi m³/anno</td><td>GME — Gestore Mercati Energetici — 2023</td></tr>
+<tr><td>Consumo elettricità</td><td class="mono">~320 TWh/anno</td><td>TERNA — Rapporto annuale — 2023</td></tr>
+<tr><td>Costo energia elettrica</td><td class="mono">€80-120/MWh</td><td>GME — Prezzi PUN — 2023</td></tr>
+<tr><td>Beneficiari RdC</td><td class="mono">~1,1 milioni</td><td>INPS — Osservatorio RdC — 2023</td></tr>
+<tr><td>Costo RdC</td><td class="mono">€8,5 miliardi</td><td>INPS — Bilancio — 2023</td></tr>
+<tr><td>Stipendio netto parlamentare</td><td class="mono">~€10.500/mese</td><td>Camera dei Deputati — sito ufficiale — 2024</td></tr>
+<tr><td>Vitalizi ex parlamentari</td><td class="mono">~2.300 percettori</td><td>Camera dei Deputati — dati pubblici — 2024</td></tr>
+<tr><td>Leggi attive stimate</td><td class="mono">~150.000</td><td>Consiglio di Stato — stima — 2022</td></tr>
+<tr><td>Produzione gas nazionale</td><td class="mono">~3 mld m³/anno</td><td>MISE — Ministero Imprese — 2023</td></tr>
+<tr><td>Riserve auree (valore)</td><td class="mono">~€213 miliardi</td><td>Banca d'Italia + LBMA gold price — apr 2024</td></tr>
+</table>
+
+<p><em>I dati sulle aziende estere (Amazon, Google, Apple, Meta, ecc.) sono stime elaborate da bilanci pubblici, Reuters, Bloomberg e analisi di settore — non sono certificati dalle aziende stesse, che non pubblicano dati disaggregati per paese. Le percentuali di tassazione effettiva sono state riportate da diverse inchieste giornalistiche e sono indicate come stime conservative.</em></p>
+
+<div class="divider"></div>
+
+<h2>Note Metodologiche — Parametri Dichiarati per le Proiezioni.</h2>
+<p>Le proiezioni a 20 anni utilizzano i seguenti parametri principali, dichiarati esplicitamente affinché possano essere verificati e contestati. Chiunque ritenga che un parametro sia errato può proporre un valore alternativo con la relativa motivazione.</p>
+
+<table><tr><th>Parametro</th><th>Valore assunto</th><th>Motivazione dettagliata</th></tr>
+<tr><td>Crescita PIL (nuovo sistema)</td><td class="mono">4,5%/anno</td><td>vs 0,7% storico; effetto consumi incentivati (tasse zero se si spende) + evasione eliminata strutturalmente + energia -70% + fiducia nel sistema. Conservativo rispetto ai potenziali effetti del nucleare e del cap.</td></tr>
+<tr><td>Calo pensioni pubbliche</td><td class="mono">5%/anno per mortalità</td><td>Età media pensionati ~72 anni; aspettativa vita ~83; nessun nuovo ingresso dalla categoria A da anno 1. Ogni anno ~800.000 pensionati muoiono su 16 milioni totali = 5%.</td></tr>
+<tr><td>Rendimento fondo pensione</td><td class="mono">3%/anno reale</td><td>Investimento prudente in titoli di Stato + infrastrutture italiane. Conservativo rispetto ai rendimenti storici ma garantito dalla struttura del fondo.</td></tr>
+<tr><td>Recupero evasione fiscale</td><td class="mono">70% di €90B = €63B</td><td>Stima conservativa; sistema CF obbligatorio elimina l'incentivo strutturale al nero. Il 30% residuo è quello che rimane anche con sistemi molto efficienti (Svezia, Finlandia).</td></tr>
+<tr><td>Confisca cap patrimoniale</td><td class="mono">€40B/anno</td><td>Stima su patrimoni >€200k basata sui dati Banca d'Italia sulla distribuzione della ricchezza in Italia 2023. Calcolato come flusso annuale, non come stock una-tantum.</td></tr>
+<tr><td>Investimento nucleare</td><td class="mono">€18B/anno per 15 anni</td><td>Basato su costi medi reattori Gen IV europei; Francia ha speso €15-20B per GW installato. 53 GW × €5B/GW = €266B totali ÷ 15 anni = €17,7B/anno.</td></tr>
+<tr><td>Cap patrimoniale</td><td class="mono">€200.000 per persona</td><td>Scelta di sistema non basata su calcoli economici — è una scelta politica e valoriale. Parametro dichiaratamente modificabile: se il documento venisse discusso democraticamente, questo è il numero più soggetto a negoziazione.</td></tr>
+</table>
+
+<div class="divider"></div>
+
+<h2>Work in Progress — Quello che Manca.</h2>
+<p>Questo documento è una base. Non è completo. Ci sono interi settori che meritano approfondimento dedicato — ognuno con le sue dinamiche, i suoi numeri, le sue implicazioni specifiche.</p>
+
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.5rem 0">
+<div style="border:1px solid rgba(26,92,56,.2);padding:1.25rem"><div style="font-family:'JetBrains Mono',monospace;font-size:.58rem;color:var(--o);letter-spacing:.15em;text-transform:uppercase;margin-bottom:.5rem">PENDING</div><div style="font-family:'Playfair Display',serif;font-weight:700;color:var(--v);font-size:1rem;margin-bottom:.4rem">Sanità Pubblica</div><div style="font-size:.82rem;color:var(--g);line-height:1.5">Gratuita per tutti. Come funziona. Ticket eliminato. Gestione SSN. Prevenzione vs cura.</div></div>
+<div style="border:1px solid rgba(26,92,56,.2);padding:1.25rem"><div style="font-family:'JetBrains Mono',monospace;font-size:.58rem;color:var(--o);letter-spacing:.15em;text-transform:uppercase;margin-bottom:.5rem">PENDING</div><div style="font-family:'Playfair Display',serif;font-weight:700;color:var(--v);font-size:1rem;margin-bottom:.4rem">Istruzione</div><div style="font-size:.82rem;color:var(--g);line-height:1.5">Materna → università gratuita. Riforma curricula. Stop al precariato dei docenti. Meritocrazia.</div></div>
+<div style="border:1px solid rgba(26,92,56,.2);padding:1.25rem"><div style="font-family:'JetBrains Mono',monospace;font-size:.58rem;color:var(--o);letter-spacing:.15em;text-transform:uppercase;margin-bottom:.5rem">PENDING</div><div style="font-family:'Playfair Display',serif;font-weight:700;color:var(--v);font-size:1rem;margin-bottom:.4rem">Salario Minimo</div><div style="font-size:.82rem;color:var(--g);line-height:1.5">Numero da definire. Meccanismo di aggiornamento automatico. Compatibilità col lavoro autonomo.</div></div>
+<div style="border:1px solid rgba(26,92,56,.2);padding:1.25rem"><div style="font-family:'JetBrains Mono',monospace;font-size:.58rem;color:var(--o);letter-spacing:.15em;text-transform:uppercase;margin-bottom:.5rem">PENDING</div><div style="font-family:'Playfair Display',serif;font-weight:700;color:var(--v);font-size:1rem;margin-bottom:.4rem">Sistema Giudiziario</div><div style="font-size:.82rem;color:var(--g);line-height:1.5">Tempi processi: media 7 anni in Italia vs 6 mesi in Germania. Riforma strutturale urgente.</div></div>
+<div style="border:1px solid rgba(26,92,56,.2);padding:1.25rem"><div style="font-family:'JetBrains Mono',monospace;font-size:.58rem;color:var(--o);letter-spacing:.15em;text-transform:uppercase;margin-bottom:.5rem">PENDING</div><div style="font-family:'Playfair Display',serif;font-weight:700;color:var(--v);font-size:1rem;margin-bottom:.4rem">Agricoltura</div><div style="font-size:.82rem;color:var(--g);line-height:1.5">Sovranità alimentare. PMI agricole. Stop alle importazioni di cibo che potremmo produrre noi.</div></div>
+<div style="border:1px solid rgba(26,92,56,.2);padding:1.25rem"><div style="font-family:'JetBrains Mono',monospace;font-size:.58rem;color:var(--o);letter-spacing:.15em;text-transform:uppercase;margin-bottom:.5rem">PENDING</div><div style="font-family:'Playfair Display',serif;font-weight:700;color:var(--v);font-size:1rem;margin-bottom:.4rem">PMI & Artigiani</div><div style="font-size:.82rem;color:var(--g);line-height:1.5">Regime specifico. Tutele. Crescita. Come il nuovo sistema aiuta chi lavora con le mani.</div></div>
+</div>
+
+<div class="box-o"><p>Chiunque può proporre una modifica, un miglioramento, un concetto alternativo. La proposta viene analizzata: se esiste un concetto migliore, si simulano i numeri e si verificano i risultati. Se funziona meglio del precedente, viene integrato nel documento con il nome e cognome di chi l'ha proposta — non viene "assorbito". Il contributo resta visibile. La paternità viene riconosciuta.</p></div>
+
+<div class="ch-nav"><a href="principi.html">← ← Principi</a><a class="home" href="index.html">⌂ Home</a><span></span></div>
+</div>
+<footer><div class="ft-logo">Sistema Italia</div>
+  <div class="ft-sub">Leonardo Casella · Aprile 2026 · v1.0</div>
+  <div class="ft-note">Tutti i numeri sono calcolati su fonti ufficiali (ISTAT, MEF, INPS, Banca d'Italia).</div>
+</footer><button class="scroll-top" id="st" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<script>
+function toggleMenu(){var m=document.getElementById('mm');m.style.display=m.style.display==='flex'?'none':'flex';}
+window.addEventListener('scroll',function(){var b=document.getElementById('st');if(b)b.style.display=window.scrollY>300?'block':'none';},{passive:true});
+document.querySelectorAll && document.querySelectorAll('.obj-q').forEach(function(q){
+  q.addEventListener('click',function(){q.classList.toggle('open');q.nextElementSibling.classList.toggle('open');});
+});
+</script>
+</body></html>

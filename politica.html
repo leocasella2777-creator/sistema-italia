@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="it"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sistema Politico — Sistema Italia</title>
+<meta name="apple-mobile-web-app-capable" content="yes"><meta name="theme-color" content="#1a5c38">
+<link rel="manifest" href="manifest.json">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+:root{--v:#1a5c38;--vc:#2d8653;--vl:#e8f5ee;--o:#c9a84c;--ol:#fdf5e0;--r:#c0392b;--b:#2c3e7a;--n:#1a1a1a;--g:#4a4a4a;--gl:#f5f5f0;--w:#fafaf8}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Source Serif 4',Georgia,serif;background:var(--w);color:var(--n);overflow-x:hidden}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:200;background:rgba(26,92,56,.97);backdrop-filter:blur(10px);height:54px;border-bottom:2px solid var(--o);display:flex;align-items:center;justify-content:space-between;padding:0 1.5rem}
+.nav-logo{font-family:'Playfair Display',serif;font-weight:900;font-size:1rem;color:var(--o);text-decoration:none}
+.nav-right{display:flex;align-items:center;gap:.5rem}
+.nav-home{font-family:'JetBrains Mono',monospace;font-size:.65rem;color:rgba(255,255,255,.6);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;padding:.3rem .7rem;border:1px solid rgba(255,255,255,.2);transition:all .2s}
+.nav-home:hover{color:var(--o);border-color:var(--o)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:.4rem;background:none;border:none}
+.hamburger span{display:block;width:22px;height:2px;background:var(--o)}
+.mob-menu{display:none;position:fixed;top:54px;left:0;right:0;bottom:0;background:rgba(10,24,16,.98);z-index:9999;flex-direction:column;overflow-y:auto;padding:.5rem 0}
+.mob-menu a{display:block;font-family:'Source Serif 4',serif;font-size:.92rem;color:rgba(255,255,255,.75);text-decoration:none;padding:.65rem 1.5rem;border-bottom:1px solid rgba(255,255,255,.06)}
+.mob-menu a:hover{color:var(--o);background:rgba(201,168,76,.08)}
+.mob-menu .ms{font-family:'JetBrains Mono',monospace;font-size:.58rem;color:rgba(255,255,255,.3);letter-spacing:.2em;text-transform:uppercase;padding:.6rem 1.5rem .3rem;margin-top:.5rem}
+.mob-menu .mhome{color:var(--o);font-weight:700;border-top:1px solid rgba(255,255,255,.15);margin-top:.5rem}
+@media(max-width:800px){.hamburger{display:flex}}
+
+/* HERO CAPITOLO */
+.ch-hero{background:var(--v);padding:4rem 2rem 3rem;position:relative;overflow:hidden}
+.ch-hero::after{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 39px,rgba(255,255,255,.015) 40px),repeating-linear-gradient(90deg,transparent,transparent 39px,rgba(255,255,255,.015) 40px)}
+.ch-hero-inner{max-width:860px;margin:0 auto;position:relative;z-index:1}
+.ch-num{font-family:'JetBrains Mono',monospace;font-size:.65rem;color:var(--o);letter-spacing:.25em;text-transform:uppercase;margin-bottom:1rem;display:flex;align-items:center;gap:.6rem}
+.ch-num::before{content:'';width:20px;height:1px;background:var(--o)}
+.ch-title{font-family:'Playfair Display',serif;font-size:clamp(2.2rem,5vw,4rem);font-weight:900;color:white;line-height:1.1;margin-bottom:.75rem}
+.ch-title span{color:var(--o)}
+.ch-sub{font-family:'Playfair Display',serif;font-size:1.1rem;font-style:italic;color:rgba(255,255,255,.55);line-height:1.6}
+
+/* CONTENUTO */
+.content{max-width:860px;margin:0 auto;padding:3.5rem 2rem}
+h2{font-family:'Playfair Display',serif;font-size:clamp(1.6rem,3vw,2.2rem);font-weight:900;color:var(--v);margin:2.5rem 0 1rem;line-height:1.2}
+h2:first-child{margin-top:0}
+h3{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--v);margin:2rem 0 .75rem}
+p{font-size:.97rem;line-height:1.85;color:var(--g);margin-bottom:1rem}
+.divider{height:2px;background:linear-gradient(90deg,var(--v),var(--o),transparent);margin:2.5rem 0}
+
+/* SEZIONI ALTERNATE */
+.sec-alt{background:var(--gl);padding:2.5rem 2rem;margin:2rem -2rem}
+.sec-dark{background:#0f1f0f;padding:2.5rem 2rem;margin:2rem -2rem}
+.sec-dark h2,.sec-dark h3{color:white}
+.sec-dark p{color:rgba(255,255,255,.65)}
+
+/* TABELLE */
+table{width:100%;border-collapse:collapse;margin:1.5rem 0;font-size:.86rem}
+th{background:var(--v);color:white;font-family:'JetBrains Mono',monospace;font-size:.6rem;letter-spacing:.08em;text-transform:uppercase;padding:.55rem .75rem;text-align:left}
+td{padding:.55rem .75rem;border-bottom:1px solid rgba(0,0,0,.07);color:var(--g);line-height:1.5}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:rgba(26,92,56,.03)}
+.bad{color:var(--r);font-weight:700;font-family:'JetBrains Mono',monospace;font-size:.75rem}
+.good{color:var(--vc);font-weight:700;font-family:'JetBrains Mono',monospace;font-size:.75rem}
+.elim{text-decoration:line-through;color:rgba(0,0,0,.2);font-size:.72rem;font-family:'JetBrains Mono',monospace}
+.mono{font-family:'JetBrains Mono',monospace;font-size:.75rem}
+table.gold th{background:#7a5f00}
+table.blue th{background:var(--b)}
+@media(max-width:600px){table{display:block;overflow-x:auto;font-size:.78rem}}
+
+/* BOX */
+.box-g{background:var(--v);padding:1.25rem 1.75rem;margin:1.5rem 0;border-radius:0}
+.box-g p{color:white;max-width:none}
+.box-o{background:var(--ol);border-left:4px solid var(--o);padding:1.25rem 1.75rem;margin:1.5rem 0}
+.box-o p{font-style:italic;color:var(--n);max-width:none}
+.box-b{background:#eef0f8;border-left:4px solid var(--b);padding:1.25rem 1.75rem;margin:1.5rem 0;font-size:.87rem;color:var(--g);line-height:1.7}
+.box-r{background:#fdeaea;border-left:4px solid var(--r);padding:1.25rem 1.75rem;margin:1.5rem 0}
+.box-r p{color:var(--r);font-size:.9rem;line-height:1.7;max-width:none}
+
+/* CARDS */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;margin:1.5rem 0}
+.card{border:1px solid rgba(26,92,56,.15);padding:1.5rem;background:white;position:relative}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--v)}
+.card.gold::before{background:var(--o)}.card.blue::before{background:var(--b)}
+.card-icon{font-size:1.4rem;margin-bottom:.6rem}
+.card-title{font-family:'Playfair Display',serif;font-size:.97rem;font-weight:700;color:var(--v);margin-bottom:.5rem}
+.card.gold .card-title{color:#7a5f00}.card.blue .card-title{color:var(--b)}
+.card-text{font-size:.83rem;line-height:1.65;color:var(--g)}
+@media(max-width:600px){.cards{grid-template-columns:1fr}}
+
+/* COMPARE */
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:2px;margin:1.5rem 0;background:rgba(0,0,0,.06)}
+.col{padding:1.5rem;background:white}
+.col.oggi{border-top:4px solid var(--r)}.col.nuovo{border-top:4px solid var(--v)}
+.col-head{font-family:'JetBrains Mono',monospace;font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;margin-bottom:1rem}
+.oggi .col-head{color:var(--r)}.nuovo .col-head{color:var(--v)}
+@media(max-width:600px){.compare{grid-template-columns:1fr}}
+
+/* PILLARS */
+.pillars{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin:1.5rem 0}
+.pillar{padding:1.75rem;border:1px solid rgba(0,0,0,.1)}
+.pillar-1{background:var(--vl);border-color:var(--v)}
+.pillar-2{background:var(--ol);border-color:var(--o)}
+.pl{font-family:'JetBrains Mono',monospace;font-size:.58rem;letter-spacing:.15em;text-transform:uppercase;margin-bottom:.6rem}
+.pillar-1 .pl{color:var(--v)}.pillar-2 .pl{color:#7a5f00}
+.pa{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;line-height:1;margin-bottom:.4rem}
+.pillar-1 .pa{color:var(--v)}.pillar-2 .pa{color:#7a5f00}
+.ps{font-size:.83rem;color:var(--g);line-height:1.6}
+.pd{margin-top:.75rem;padding-top:.75rem;border-top:1px solid rgba(0,0,0,.1);font-family:'JetBrains Mono',monospace;font-size:.65rem;color:var(--g);line-height:1.7}
+@media(max-width:600px){.pillars{grid-template-columns:1fr}}
+
+/* BULLETS */
+ul.bl{margin:1rem 0 1.5rem;padding-left:0;list-style:none}
+ul.bl li{padding:.35rem 0 .35rem 1.5rem;position:relative;font-size:.9rem;line-height:1.6;color:var(--g);border-bottom:1px solid rgba(0,0,0,.05)}
+ul.bl li:last-child{border-bottom:none}
+ul.bl li::before{content:'→';position:absolute;left:0;color:var(--o);font-size:.78rem}
+
+/* QUOTE */
+.quote{background:var(--ol);border-left:5px solid var(--o);padding:1.5rem 2rem;margin:2rem 0}
+.qt{font-family:'Playfair Display',serif;font-size:1.25rem;font-style:italic;line-height:1.5;color:var(--n)}
+.qa{font-family:'JetBrains Mono',monospace;font-size:.6rem;color:var(--o);letter-spacing:.1em;text-transform:uppercase;margin-top:.75rem}
+
+/* OBIEZIONI */
+.obj{border:1px solid rgba(0,0,0,.1);margin-bottom:1.25rem}
+.obj-q{background:var(--n);padding:.9rem 1.5rem;font-family:'Playfair Display',serif;font-size:.97rem;font-weight:700;color:var(--o);cursor:pointer;display:flex;justify-content:space-between;align-items:center;width:100%;text-align:left;border:none}
+.obj-q::after{content:'＋';font-size:1rem;transition:transform .3s}
+.obj-q.open::after{transform:rotate(45deg)}
+.obj-a{display:none;padding:1.25rem 1.5rem;background:white;font-size:.9rem;line-height:1.75;color:var(--g)}
+.obj-a.open{display:block}
+
+/* NUMS */
+.nums{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.1);margin:2rem 0}
+.num{background:rgba(0,0,0,.2);padding:1.75rem 1.25rem;text-align:center}
+.num-v{font-family:'Playfair Display',serif;font-size:1.9rem;font-weight:900;color:var(--o);line-height:1;margin-bottom:.4rem}
+.num-l{font-family:'JetBrains Mono',monospace;font-size:.56rem;color:rgba(255,255,255,.45);letter-spacing:.08em;text-transform:uppercase;line-height:1.5}
+.num-s{font-size:.68rem;color:rgba(255,255,255,.22);font-style:italic;margin-top:.2rem}
+@media(max-width:600px){.nums{grid-template-columns:1fr 1fr}}
+
+/* TIMELINE */
+.tl{margin:2rem 0}
+.tl-item{display:grid;grid-template-columns:65px 1fr;gap:1rem;margin-bottom:1.1rem;align-items:start}
+.tl-y{font-family:'JetBrains Mono',monospace;font-size:.68rem;font-weight:700;color:var(--o);text-align:right;padding-top:.12rem}
+.tl-bar{height:4px;border-radius:2px;margin-bottom:.3rem}
+.tl-t{font-size:.8rem;color:rgba(255,255,255,.55);line-height:1.5}
+.tl-t strong{color:var(--o)}
+.tl-badge{background:var(--o);color:var(--v);display:inline-block;padding:.12rem .45rem;font-family:'JetBrains Mono',monospace;font-size:.56rem;font-weight:700;text-transform:uppercase;margin-top:.2rem}
+
+/* PRINCIPI */
+.prin{display:grid;grid-template-columns:2.25rem 1fr;gap:1.1rem;align-items:start;padding:1.25rem 0;border-bottom:1px solid rgba(0,0,0,.07)}
+.prin:last-child{border-bottom:none}
+.prin-n{font-family:'JetBrains Mono',monospace;font-size:.62rem;color:var(--o);font-weight:700;padding-top:.12rem}
+.prin-t{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--v);margin-bottom:.25rem}
+.prin-x{font-size:.88rem;line-height:1.65;color:var(--g)}
+
+/* NAV CAPITOLI */
+.ch-nav{display:flex;justify-content:space-between;align-items:center;padding:2rem;border-top:2px solid rgba(0,0,0,.08);margin-top:1rem;gap:1rem}
+.ch-nav a{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--v);text-decoration:none;letter-spacing:.05em;padding:.6rem 1.2rem;border:1px solid var(--v);transition:all .2s;flex:1;text-align:center}
+.ch-nav a:hover{background:var(--v);color:white}
+.ch-nav a.home{background:var(--o);color:var(--v);border-color:var(--o);font-weight:700;flex:0}
+.ch-nav a.home:hover{background:var(--v);color:white;border-color:var(--v)}
+
+/* FOOTER */
+footer{background:var(--n);padding:2.5rem;text-align:center}
+.ft-logo{font-family:'Playfair Display',serif;font-size:1.3rem;font-weight:900;color:var(--o);margin-bottom:.4rem}
+.ft-sub{font-family:'JetBrains Mono',monospace;font-size:.6rem;color:rgba(255,255,255,.3);letter-spacing:.15em;text-transform:uppercase;margin-bottom:1rem}
+.ft-note{font-size:.78rem;color:rgba(255,255,255,.22);font-style:italic;max-width:480px;margin:0 auto;line-height:1.6}
+.scroll-top{position:fixed;bottom:1.5rem;right:1.5rem;background:var(--v);color:var(--o);border:none;width:40px;height:40px;cursor:pointer;font-size:1rem;display:none;z-index:100}
+
+@media(max-width:600px){
+  .content{padding:2.5rem 1.25rem}
+  .sec-alt,.sec-dark{margin:2rem -1.25rem;padding:2rem 1.25rem}
+  .ch-nav{flex-direction:column}
+  .ch-nav a{text-align:center}
+}
+</style><style>
+.chart-wrap{background:white;border:1px solid rgba(0,0,0,.08);padding:1.5rem;margin:1.5rem 0}
+.chart-title{font-family:'JetBrains Mono',monospace;font-size:.65rem;color:var(--v);letter-spacing:.12em;text-transform:uppercase;margin-bottom:1rem}
+.kpi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1.5rem 0}
+.kpi{background:var(--gl);padding:1.25rem;text-align:center;border-top:3px solid var(--v)}
+.kpi.gold{border-top-color:var(--o)}.kpi.red{border-top-color:var(--r)}
+.kpi-n{font-family:'Playfair Display',serif;font-size:1.9rem;font-weight:900;color:var(--v);line-height:1;margin-bottom:.3rem}
+.kpi.gold .kpi-n{color:#7a5f00}.kpi.red .kpi-n{color:var(--r)}
+.kpi-l{font-family:'JetBrains Mono',monospace;font-size:.6rem;color:var(--g);letter-spacing:.08em;text-transform:uppercase}
+@media(max-width:600px){.kpi-grid{grid-template-columns:1fr 1fr}}
+</style><script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+</head><body>
+<nav>
+  <a class="nav-logo" href="index.html">Sistema Italia</a>
+  <div class="nav-right">
+    <a class="nav-home" href="index.html">Home</a>
+    <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="mob-menu" id="mm">
+  <div class="ms">Naviga</div>
+  <a href="prefazione.html">Prefazione</a>
+<a href="fiscale.html">01 — Fiscale</a>
+<a href="bilancio.html">02 — Bilancio</a>
+<a href="pensioni.html">03 — Pensioni</a>
+<a href="energia.html">04 — Energia</a>
+<a href="welfare.html">05 — Welfare</a>
+<a href="proiezioni.html">06 — Proiezioni</a>
+<a href="riflessioni.html">Riflessioni</a>
+<a href="principi.html">Principi</a>
+<a href="fonti.html">Fonti & WIP</a>
+  <a class="mhome" href="./sistema_italia_v119.pdf" target="_blank">PDF Completo ↓</a>
+</div>
+<div class="ch-hero"><div class="ch-hero-inner">
+  <div class="ch-num">07–13 — Sistema Politico</div>
+  <h1 class="ch-title">Sistema Politico</h1>
+  <p class="ch-sub">Voto qualificato. Azzeramento. Mandato KPI. AI e leggi. Immigrazione.</p>
+</div></div>
+<div class="content">
+
+<h2>07 — Democrazia Qualificata</h2>
+<p>La democrazia è il sistema meno peggio che abbiamo trovato per governare. Ma ha un problema che nessuno vuole ammettere: sei ignoranti comandano su quattro intelligenti. La maggioranza decide — anche quando non capisce cosa sta decidendo. Non è una questione di intelligenza come dote naturale — è di conoscenza. Se voti su una riforma fiscale senza sapere cos'è l'IVA, se scegli chi gestisce la sanità senza conoscere la Costituzione, stai guidando un aereo senza saper volare. Con la differenza che non muori solo tu.</p>
+<p>La soluzione non è togliere il diritto di voto — è renderlo una responsabilità. Come guidare: tutti possono imparare, ma devi dimostrare di saper farlo.</p>
+
+<table><tr><th>Dato</th><th>Italia oggi</th><th>Implicazione</th></tr>
+<tr><td>Analfabetismo funzionale adulti</td><td class="bad">28-35%</td><td>Quasi 1 su 3 non capisce testi base</td></tr>
+<tr><td>Politici senza laurea (Camera 2022)</td><td class="bad">~40%</td><td>Governano senza formazione specifica</td></tr>
+<tr><td>Leggi italiane attive</td><td class="bad">~150.000</td><td>Migliaia si contraddicono tra loro</td></tr>
+<tr><td>Promesse elettorali mantenute</td><td class="bad">~40-60%</td><td>Zero conseguenze per chi mente</td></tr>
+</table>
+
+<h3>Come Funziona il Voto Qualificato</h3>
+<ul class="bl">
+<li>Chiunque può fare l'esame — è gratuito, accessibile, ripetibile illimitatamente</li>
+<li>Contenuto: Costituzione italiana, struttura dello Stato, diritti e doveri fondamentali</li>
+<li>NON è un esame politico — non chiede opinioni, chiede fatti istituzionali oggettivi</li>
+<li>Valutato da AI: nessuna corruzione possibile nel processo di esame</li>
+<li>Le domande sono pubbliche e immutabili senza referendum del popolo qualificato</li>
+<li>Stima: ~65-70% degli italiani supera l'esame al primo tentativo</li>
+</ul>
+<div class="box-b">Non è un filtro per censo, istruzione o origine. Un operaio con la terza media che conosce la Costituzione vota. Un laureato che non l'ha mai letta non vota — finché non la studia. L'obiettivo è includere chi si impegna, non escludere per nascita o reddito.</div>
+
+<div class="divider"></div>
+
+<h2>08 — Azzeramento & Esami per Governare</h2>
+<p>La domanda più difficile è: chi applica il nuovo sistema? Non può essere chi c'è adesso. Non per odio — per logica. Chi ha costruito il sistema attuale è dentro quel sistema: ha interessi, relazioni, favori da restituire. Una persona sola non cambia un sistema — il sistema cambia la persona. Per questo serve un azzeramento completo.</p>
+
+<ul class="bl">
+<li>Tutta la classe politica attuale viene azzerata simultaneamente</li>
+<li>Divieto di candidatura per 2 generazioni familiari</li>
+<li>Chi vuole rientrare: supera l'esame per governare e ricomincia da zero come tutti gli altri</li>
+<li>Esame per governare: più approfondito del voto qualificato — economia, diritto, governance</li>
+<li>Stipendio politici: €3.000/mese — la media nazionale. Nessun vitalizio, nessuna auto di servizio.</li>
+<li>Ogni conflitto di interessi dichiarato pubblicamente prima di qualsiasi votazione</li>
+</ul>
+
+<table class="blue"><tr><th>Voce</th><th>Oggi</th><th>Nuovo sistema</th><th>Risparmio</th></tr>
+<tr><td>Stipendio parlamentare</td><td class="bad">~€10.500/mese</td><td class="good">€3.000/mese</td><td class="good">€7.500/mese x 945 parlamentari = €84M/anno</td></tr>
+<tr><td>Vitalizio</td><td class="bad">A vita (~2.300 percettori)</td><td class="elim">ELIMINATO</td><td class="good">~€200M/anno</td></tr>
+<tr><td>Auto di servizio</td><td class="bad">Con autista pagato</td><td class="elim">ELIMINATA</td><td class="good">Significativo</td></tr>
+<tr><td>Leggi attive</td><td class="bad">~150.000 complesse</td><td class="good">10-15k chiare e semplici</td><td class="good">Burocrazia ridotta drasticamente</td></tr>
+</table>
+
+<div class="divider"></div>
+
+<h2>09 — Mandato Programmatico</h2>
+<p>Ogni cinque anni i politici fanno promesse. Poi governano, le dimenticano, e alla prossima campagna ne fanno di nuove. Non esiste nessun meccanismo che li obblighi a mantenere ciò che hanno detto. Al massimo perdono le elezioni — ma intanto hanno governato per cinque anni. Nel nuovo sistema le promesse diventano contratti.</p>
+
+<ul class="bl">
+<li>Ogni promessa elettorale entra automaticamente nel mandato programmatico come obiettivo misurabile</li>
+<li>Ogni obiettivo ha scadenza, KPI verificabile e soglia minima di successo</li>
+<li>L'AI monitora l'avanzamento in tempo reale e lo pubblica nello sportello trasparenza</li>
+<li>Chi non mantiene una promessa senza causa documentata e verificata risponde legalmente</li>
+<li>Chi ha promesso sapendo di non poter mantenere risponde per aver indotto i cittadini a votare su basi false</li>
+<li>Referendum obbligatorio ogni 2 anni su ogni decisione che cambia sostanzialmente il sistema</li>
+</ul>
+
+<div class="box-b">📌 <strong>Sportello Trasparenza Online:</strong> ogni euro di spesa pubblica visibile in tempo reale. Ogni promessa con indicatore di avanzamento. Ogni contratto pubblico con importo, beneficiario, giustificazione. Accessibile da chiunque, in ogni momento, senza burocrazia.</div>
+
+<div class="divider"></div>
+
+<h2>10 — Il Meccanismo degli Impedimenti</h2>
+<p>Nel vecchio sistema, quando un politico non manteneva una promessa, la giustificazione era sempre pronta: "le condizioni sono cambiate", "il Parlamento non ha approvato". Mai verificabile, mai sanzionabile. Nel nuovo sistema ogni impedimento deve essere dichiarato formalmente e verificato dall'AI entro 48 ore.</p>
+
+<table><tr><th>Tipo di impedimento</th><th>Verifica AI</th><th>Conseguenza</th></tr>
+<tr><td>Evento esterno documentato (crisi, catastrofe)</td><td>AI verifica correlazione causale</td><td>Impedimento legittimo — promessa spostata con nuova scadenza</td></tr>
+<tr><td>Voto contrario del Parlamento</td><td>AI verifica il voto e chi ha votato contro</td><td>Impedimento legittimo — ma chi ha sabotato risponde</td></tr>
+<tr><td>Cambio condizioni economiche strutturali</td><td>AI verifica i dati macroeconomici</td><td>Valutazione caso per caso — con giustificazione pubblica</td></tr>
+<tr><td>Nessuna giustificazione verificabile</td><td>AI rileva incoerenza</td><td>Violazione del mandato — procedimento legale automatico</td></tr>
+</table>
+
+<div class="divider"></div>
+
+<h2>11 — Opposizione Costruttiva & Uscita dall'UE</h2>
+
+<div class="compare">
+<div class="col oggi"><div class="col-head">⚠ Oggi — Incentivo Distruttivo</div>
+<p style="font-size:.9rem;line-height:1.7">L'opposizione ha un solo incentivo reale: far fallire il governo per vincere le prossime elezioni. Se il paese va peggio → l'opposizione va meglio. È strutturalmente distruttivo. L'opposizione più efficace oggi non è quella che propone alternative migliori — è quella che blocca tutto.</p></div>
+<div class="col nuovo"><div class="col-head">✓ Nuovo — Incentivo Costruttivo</div>
+<p style="font-size:.9rem;line-height:1.7">Se il governo mantiene le promesse, l'opposizione guadagna credibilità proponendo alternative migliori su quelle già mantenute. Se il paese va bene → chi governa bene viene premiato → l'opposizione deve proporre di più, non distruggere. L'incentivo è costruire, non sabotare.</p></div>
+</div>
+
+<h3>Decisioni Sovranazionali — Referendum Obbligatorio</h3>
+<p>Qualsiasi decisione sull'appartenenza all'UE, alla NATO, o a qualsiasi organizzazione sovranazionale richiede referendum obbligatorio con quorum del 50%+1 degli aventi diritto. Non basta la maggioranza dei votanti — bisogna che la maggioranza degli italiani si esprima. Mai più un governo che porta l'Italia in una unione monetaria senza chiedere ai cittadini.</p>
+
+<div class="divider"></div>
+
+<h2>12 — AI & Semplificazione delle Leggi</h2>
+<p>Le leggi italiane sono come un software scritto, riscritto, modificato, aggiunto e tagliato per 150 anni da migliaia di programmatori diversi, senza mai una revisione completa del codice. Il risultato è che oggi nessuno ha il sistema legge sotto mano nella sua interezza. Nemmeno i giuristi più esperti. Ci sono leggi che si contraddicono tra loro. Leggi mai applicate. Leggi incomprensibili senza un avvocato.</p>
+
+<ul class="bl">
+<li>AI scansiona tutte le 150.000 leggi italiane: identifica contraddizioni, doppioni, ambiguità e norme obsolete</li>
+<li>Propone automaticamente: unificazione, eliminazione, riformulazione in linguaggio univoco e comprensibile</li>
+<li>Il Parlamento approva per blocchi tematici — non serve rifare tutto insieme, ci vogliono anni ma si procede</li>
+<li>Ogni nuova legge approvata: AI verifica la congruenza con il sistema esistente prima della pubblicazione</li>
+<li>Nessuna nuova legge che contraddice una legge esistente senza abrogare esplicitamente quella vecchia</li>
+<li>Obiettivo finale: 10.000-15.000 leggi chiare, semplici, comprensibili da chiunque con una cultura media</li>
+</ul>
+
+<div class="divider"></div>
+
+<h2>13 — Sicurezza & Immigrazione Regolata</h2>
+<p>Il principio è semplice: ogni persona è libera di venire in Italia. Ma un sistema basato su tracciabilità, contribuzione e regole uguali per tutti non può funzionare con un'immigrazione non regolata. Non è una questione di chiusura — è una questione di coerenza del sistema. Chi viene in Italia entra in un sistema. Il sistema vale per tutti.</p>
+
+<table><tr><th>Controllo</th><th>Frequenza</th><th>Cosa verifica</th><th>Conseguenza se negativo</th></tr>
+<tr><td>Residenza effettiva</td><td class="mono">Mensile</td><td>Presenza reale sul territorio dichiarato</td><td>Avviso → 30 giorni per regolarizzare → espulsione</td></tr>
+<tr><td>Situazione economica</td><td class="mono">Mensile</td><td>Autosufficienza, reddito, nessun debito critico</td><td>Categoria A welfare per 12 mesi → poi valutazione</td></tr>
+<tr><td>Situazione fiscale</td><td class="mono">Continuo (AI)</td><td>Contribuzione regolare, nessuna evasione</td><td>Blocco del permesso di soggiorno immediato</td></tr>
+<tr><td>Situazione legale</td><td class="mono">Continuo (AI)</td><td>Nessun reato, nessuna pendenza giudiziaria</td><td>Reato grave → espulsione immediata dopo condanna</td></tr>
+</table>
+
+<h3>Percorso verso la Cittadinanza</h3>
+<table><tr><th>Via</th><th>Requisiti imprescindibili</th></tr>
+<tr><td>Matrimonio con cittadino/a italiano/a</td><td>Unione legale certificata. Nessun problema legale. Nessun problema fiscale. Verifica autenticità del vincolo (non un matrimonio di convenienza).</td></tr>
+<tr><td>Residenza e lavoro continuativi</td><td>15 anni ininterrotti sul territorio italiano. Nessun problema legale in tutto il periodo. Nessun problema fiscale. AI certifica autosufficienza economica per tutto il periodo.</td></tr>
+</table>
+
+<div class="box-b">⚖️ Le regole sono uguali per tutti. Un italiano che evade le tasse subisce le stesse conseguenze di uno straniero che evade. Un italiano che commette un reato grave subisce le stesse pene di uno straniero. Non esiste un sistema per gli italiani e uno per gli altri — esiste il sistema.</div>
+
+<div class="ch-nav"><a href="proiezioni.html">← ← 06 Proiezioni</a><a class="home" href="index.html">⌂ Home</a><a href="riflessioni.html">Riflessioni →</a></div>
+</div>
+<footer><div class="ft-logo">Sistema Italia</div>
+  <div class="ft-sub">Leonardo Casella · Aprile 2026 · v1.0</div>
+  <div class="ft-note">Tutti i numeri sono calcolati su fonti ufficiali (ISTAT, MEF, INPS, Banca d'Italia).</div>
+</footer><button class="scroll-top" id="st" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+<script>
+function toggleMenu(){var m=document.getElementById('mm');m.style.display=m.style.display==='flex'?'none':'flex';}
+window.addEventListener('scroll',function(){var b=document.getElementById('st');if(b)b.style.display=window.scrollY>300?'block':'none';},{passive:true});
+document.querySelectorAll && document.querySelectorAll('.obj-q').forEach(function(q){
+  q.addEventListener('click',function(){q.classList.toggle('open');q.nextElementSibling.classList.toggle('open');});
+});
+</script>
+</body></html>
