@@ -198,6 +198,37 @@ footer{background:var(--v);color:rgba(255,255,255,.7);padding:2rem 1.5rem;text-a
 </nav>
 <div class="mob-menu" id="mm">
   <div class="ms">Naviga</div>
+  <a href="prefazione.html">Prefazione</a>
+  <a href="debito.html">Il Debito</a>
+  <a href="fiscale.html">01 — Fiscale</a>
+  <a href="bilancio.html">02 — Bilancio</a>
+  <a href="pensioni.html">03 — Pensioni</a>
+  <a href="energia.html">04 — Energia</a>
+  <a href="welfare.html">05 — Welfare</a>
+  <a href="proiezioni.html">06 — Proiezioni</a>
+  <a href="politica.html">07–13 — Politico</a>
+  <div class="ms" style="margin-top:.5rem;font-size:.7rem;opacity:.7">APPROFONDIMENTI</div>
+  <a href="agricoltura.html">Agricoltura</a>
+  <a href="beni_strategici.html">Beni Strategici</a>
+  <a href="artigiani.html">Artigiani & PMI</a>
+  <a href="salario.html">Salario & Lavoro</a>
+  <a href="informazione.html">Informazione</a>
+  <a href="industria.html">Industria & Auto</a>
+  <a href="moneta.html">Moneta & Lira</a>
+  <a href="surplus.html">Surplus</a>
+  <a href="immigrazione.html">Immigrazione</a>
+  <a href="famiglia.html">Famiglia</a>
+  <div class="ms" style="margin-top:.5rem;font-size:.7rem;opacity:.7">IN SVILUPPO</div>
+  <a href="sanita.html">Sanità 🚧</a>
+  <a href="istruzione.html">Istruzione 🚧</a>
+  <a href="giustizia.html">Giustizia 🚧</a>
+  <a href="forze_ordine.html">Forze dell'Ordine 🚧</a>
+  <a href="ambiente.html">Ambiente 🚧</a>
+  <div class="ms" style="margin-top:.5rem;font-size:.7rem;opacity:.7">ALTRO</div>
+  <a href="riflessioni.html">Riflessioni</a>
+  <a href="principi.html">Principi</a>
+  <a href="fonti.html">Fonti</a>
+</div>
 
 <div class="hero">
   <div style="font-size:.8rem;color:var(--o);letter-spacing:.15em;text-transform:uppercase;margin-bottom:1rem">Leonardo Casella · Aprile 2026</div>
@@ -263,5 +294,16 @@ footer{background:var(--v);color:rgba(255,255,255,.7);padding:2rem 1.5rem;text-a
 
 <button onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:1.5rem;right:1.5rem;background:var(--v);color:#fff;border:none;border-radius:50%;width:44px;height:44px;font-size:1.2rem;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.2)">↑</button>
 
+<script>
+function toggleMenu(){
+  var m=document.getElementById('mm');
+  m.style.display=m.style.display==='flex'?'none':'flex';
+}
+document.querySelectorAll('.mob-menu a').forEach(function(a){
+  a.addEventListener('click',function(){
+    document.getElementById('mm').style.display='none';
+  });
+});
+</script>
 </body>
 </html>
