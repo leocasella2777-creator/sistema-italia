@@ -2,14 +2,9 @@
 <html lang="it">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sistema Italia — Leonardo Casella</title>
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="theme-color" content="#1a5c38">
-<link rel="manifest" href="manifest.json">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Salario Minimo & Lavoro — Sistema Italia v151</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
 :root{--v:#1a5c38;--vc:#2d8653;--vl:#e8f5ee;--o:#c9a84c;--ol:#fdf5e0;--r:#c0392b;--b:#2c3e7a;--n:#1a1a1a;--g:#4a4a4a;--gl:#f5f5f0;--w:#fafaf8}
 *{margin:0;padding:0;box-sizing:border-box}
@@ -173,38 +168,6 @@ footer{background:var(--n);padding:2.5rem;text-align:center}
   .ch-nav{flex-direction:column}
   .ch-nav a{text-align:center}
 }
-@media(min-width:801px){.nav-pdf-btn{display:inline-block!important}}
-</style>
-<style>
-.hero{min-height:100vh;background:var(--v);display:flex;align-items:center;position:relative;overflow:hidden}
-.hero::after{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 59px,rgba(255,255,255,.015) 60px),repeating-linear-gradient(90deg,transparent,transparent 59px,rgba(255,255,255,.015) 60px)}
-.hi{max-width:1100px;margin:0 auto;padding:4rem 2rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;position:relative;z-index:1}
-.eyebrow{font-family:'JetBrains Mono',monospace;font-size:.68rem;color:var(--o);letter-spacing:.25em;text-transform:uppercase;margin-bottom:1.5rem;display:flex;align-items:center;gap:.75rem}
-.eyebrow::before{content:'';width:30px;height:1px;background:var(--o)}
-.hi h1{font-family:'Playfair Display',serif;font-size:clamp(3rem,5vw,5rem);font-weight:900;line-height:1;color:white;margin-bottom:.5rem}
-.hi h1 span{color:var(--o)}
-.hi .sub{font-family:'Playfair Display',serif;font-size:1.1rem;font-style:italic;color:rgba(255,255,255,.6);line-height:1.6;margin-bottom:1.5rem;max-width:none}
-.hi .author{font-family:'JetBrains Mono',monospace;font-size:.65rem;color:rgba(255,255,255,.4);letter-spacing:.1em;text-transform:uppercase;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.15);margin-top:1.5rem}
-.stats{display:grid;grid-template-columns:1fr 1fr;gap:1.5px;background:rgba(255,255,255,.08)}
-.stat{background:rgba(0,0,0,.22);padding:1.5rem;border:1px solid rgba(201,168,76,.15)}
-.stat-n{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:var(--o);line-height:1;margin-bottom:.4rem}
-.stat-l{font-family:'JetBrains Mono',monospace;font-size:.58rem;color:rgba(255,255,255,.45);letter-spacing:.1em;text-transform:uppercase;line-height:1.4}
-.stat-s{font-size:.7rem;color:rgba(255,255,255,.28);font-style:italic;margin-top:.2rem}
-.ch-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;padding:3rem 2rem;max-width:1100px;margin:0 auto}
-.ch-card{border:1px solid rgba(26,92,56,.15);padding:1.75rem;background:white;text-decoration:none;display:block;position:relative;transition:transform .2s,box-shadow .2s}
-.ch-card:hover{transform:translateY(-3px);box-shadow:0 8px 30px rgba(26,92,56,.1)}
-.ch-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--v)}
-.ch-card.gold::before{background:var(--o)}.ch-card.blue::before{background:var(--b)}
-.ch-card .num{font-family:'JetBrains Mono',monospace;font-size:.6rem;color:var(--o);letter-spacing:.15em;text-transform:uppercase;margin-bottom:.6rem}
-.ch-card h3{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--v);margin-bottom:.5rem;line-height:1.3}
-.ch-card.gold h3{color:#7a5f00}.ch-card.blue h3{color:var(--b)}
-.ch-card p{font-size:.83rem;line-height:1.6;color:var(--g);margin:0}
-.ch-card .arr{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--o);margin-top:1rem;display:block}
-.intro-sec{background:var(--gl);padding:3rem 2rem}
-.intro-inner{max-width:1100px;margin:0 auto}
-.intro-inner h2{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:var(--v);margin-bottom:1rem}
-.intro-inner p{font-size:.97rem;line-height:1.85;color:var(--g);max-width:700px}
-@media(max-width:700px){.hi{grid-template-columns:1fr;gap:2rem;padding:3rem 1.25rem}.stats{grid-template-columns:1fr 1fr}.ch-grid{grid-template-columns:1fr;padding:2rem 1.25rem}}
 </style>
 </head>
 <body>
@@ -217,90 +180,100 @@ footer{background:var(--n);padding:2.5rem;text-align:center}
 </nav>
 <div class="mob-menu" id="mm">
   <div class="ms">Naviga</div>
-  <a href="prefazione.html">Prefazione</a>
-  <a href="debito.html">Il Debito che Divora Tutto</a>
-  <a href="fiscale.html">01 — Fiscale</a>
-  <a href="bilancio.html">02 — Bilancio</a>
-  <a href="pensioni.html">03 — Pensioni</a>
-  <a href="energia.html">04 — Energia</a>
-  <a href="welfare.html">05 — Welfare</a>
-  <a href="proiezioni.html">06 — Proiezioni</a>
-  <a href="agricoltura.html">Agricoltura</a>
-  <a href="beni_strategici.html">Beni Strategici</a>
-  <a href="artigiani.html">Artigiani & PMI</a>
-  <a href="informazione.html">Informazione</a>
-  <a href="industria.html">Industria</a>
-  <a href="moneta.html">Moneta & Lira</a>
-  <a href="surplus.html">Surplus & Debito</a>
-  <a href="politica.html">07-13 — Politica</a>
-  <a href="riflessioni.html">Riflessioni</a>
-  <a href="principi.html">Principi</a>
-  <a href="fonti.html">Fonti & WIP</a>
-  <a class="mhome" href="sistema_italia_v151.pdf" target="_blank">PDF Completo ↓</a>
-</div>
 
-<div class="hero">
-  <div class="hi">
-    <div>
-      <div class="eyebrow">Manifesto di Riforma Strutturale</div>
-      <h1>Sistema<br><span>Italia</span></h1>
-      <p class="sub">Un progetto concreto, calcolato e verificabile per ridare agli italiani la sovranità sul proprio paese.</p>
-      <a href="prefazione.html" style="display:inline-flex;align-items:center;gap:.6rem;background:var(--o);color:var(--v);font-family:'JetBrains Mono',monospace;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.75rem 1.5rem;text-decoration:none;margin-top:.5rem">Inizia a leggere →</a>
-      <div class="author">Leonardo Casella &nbsp;·&nbsp; Aprile 2026 &nbsp;·&nbsp; <strong style="color:var(--o)">v151</strong></div>
-    </div>
-    <div class="stats">
-      <div class="stat"><div class="stat-n">+141%</div><div class="stat-l">PIL in 20 anni</div><div class="stat-s">da €2.100B a €4.179B</div></div>
-      <div class="stat"><div class="stat-n">-1%</div><div class="stat-l">Debito/PIL anno 20 (137%)</div><div class="stat-s">da 138% a 137% in 20 anni (+PIL +99%)</div></div>
-      <div class="stat"><div class="stat-n">Solo 2</div><div class="stat-l">Tasse — IVA e residuo</div><div class="stat-s">tutto il resto eliminato</div></div>
-      <div class="stat"><div class="stat-n">€3.100B</div><div class="stat-l">Fondo pensioni anno 20</div><div class="stat-s">autosufficiente per sempre</div></div>
-    </div>
+<div class="ch-hero">
+  <div class="ch-hero-inner">
+    <div class="ch-num">Sistema Economico</div>
+    <h1 class="ch-title">Salario Minimo & Lavoro</h1>
+    <p class="ch-sub">Il mercato si autoregola. Perché il salario minimo non serve nel nuovo sistema.</p>
   </div>
 </div>
 
-<div class="intro-sec">
-  <div class="intro-inner">
-    <h2>Perché l'Italia è in declino da trent'anni.</h2>
-    <p>La risposta non è nella mancanza di risorse — è in un sistema di incentivi sbagliato. Un sistema fiscale che premia chi evade, pensioni che si reggono sul debito dei figli, una politica che protegge chi c'è già invece di selezionare chi sa fare. Questo documento risponde a una domanda: se si potesse ripartire da zero, con numeri reali e principi chiari, come sarebbe l'Italia?</p>
-  </div>
+<div class="content">
+
+<p>Nel nuovo sistema il concetto di "salario minimo" non serve — perché il sistema stesso lo rende superfluo. Ecco come funziona il rapporto di lavoro e perché il mercato si autoregola.</p>
+<div class="divider"></div>
+<div class="divider"></div>
+
+<h2>Nuovo Rapporto di Lavoro — Tutti Professionisti</h2>
+<p>Nel nuovo sistema non esiste la figura del dipendente. Non esistono CCNL, contratti collettivi obbligatori, scatti di anzianità automatici, TFR imposto. Ogni lavoratore è un professionista autonomo che stipula un contratto libero con chi ha bisogno delle sue prestazioni — come tra un venditore e un compratore.</p>
+<p>Il datore di lavoro non è più un datore di lavoro: è un committente. Paga il compenso concordato, punto. Non gestisce burocrazia, non calcola ferie, non mette da parte TFR, non paga contributi per conto di nessuno. Il costo totale è esattamente il compenso concordato — niente di più, niente di meno.</p>
+
+<div class="box-b">⚠️ <strong>I numeri qui sotto sono un esempio illustrativo</strong> basato su €2.500 concordati. Non è un salario minimo imposto dal sistema. Ogni lavoratore — operaio, ingegnere, artigiano, dirigente, medico, autista — negozierà liberamente la propria cifra in base alla mansione, alle competenze, all'esperienza, alla domanda di mercato e alla sua capacità di negoziazione.</div>
+
+<div class="compare">
+<div class="col oggi"><div class="col-head">⚠ Oggi — Costo reale datore: €3.518/mese</div>
+<table><tr><td>Lordo dichiarato</td><td class="mono">€2.333/mese</td></tr>
+<tr><td>+ Contributi datore INPS (28%)</td><td class="bad">+€653</td></tr>
+<tr><td>+ TFR accantonato (1/13,5)</td><td class="bad">+€173</td></tr>
+<tr><td>+ 13a mensilità (1/12)</td><td class="bad">+€194</td></tr>
+<tr><td>+ Ferie retribuite (26 gg)</td><td class="bad">+€165</td></tr>
+<tr><td><strong>COSTO TOTALE DATORE</strong></td><td class="bad"><strong>€3.518/mese</strong></td></tr>
+<tr><td colspan="2" style="background:#f5f5f0;font-size:.8rem;color:var(--g)">Dal lordo €2.333 il lavoratore paga:</td></tr>
+<tr><td>IRPEF (aliquota media ~27%)</td><td class="bad">-€630</td></tr>
+<tr><td>Contributi lavoratore INPS (~9%)</td><td class="bad">-€210</td></tr>
+<tr><td><strong>NETTO IN BUSTA</strong></td><td class="bad"><strong>€1.493/mese</strong></td></tr>
+<tr><td>- Tasse nascoste (accise, TARI, bollo…)</td><td class="bad">-€116</td></tr>
+<tr style="background:#fdeaea"><td><strong>POTERE D'ACQUISTO REALE</strong></td><td class="bad"><strong>€1.377/mese</strong></td></tr>
+</table>
+</div>
+<div class="col nuovo"><div class="col-head">✓ Nuovo — Esempio: €2.500 concordati</div>
+<table><tr><td>Compenso concordato (esempio)</td><td class="good">€2.500/mese</td></tr>
+<tr><td>Risparmio del datore</td><td class="good">€1.018 (va al lavoratore o all'azienda)</td></tr>
+<tr><td colspan="2" style="background:var(--vl);font-size:.8rem;color:var(--g)">Il lavoratore gestisce autonomamente:</td></tr>
+<tr><td>Pensione obbligatoria (fondo suo)</td><td class="mono">-€850/mese</td></tr>
+<tr><td>Assicurazione malattia/infortuni (deducibile)</td><td class="mono">-€150/mese</td></tr>
+<tr><td>Tasse eliminate (accise, bollo, TARI…)</td><td class="good">+€116/mese</td></tr>
+<tr><td>Tassa residuo (se spende tutto)</td><td class="good">€0</td></tr>
+<tr style="background:var(--vl)"><td><strong>POTERE D'ACQUISTO REALE</strong></td><td class="good"><strong>€1.616/mese (+17%)</strong></td></tr>
+</table>
+<p style="font-size:.82rem;color:var(--g);margin-top:.75rem">Il datore risparmia €1.018/mese rispetto a prima. Se lo usa per aumentare il compenso del lavoratore, il potere d'acquisto reale sale ancora di più. Se lo reinveste in azienda, crea più posti di lavoro.</p>
+</div>
 </div>
 
-<div class="ch-grid">
-  <a href="prefazione.html" class="ch-card"><div class="num">Intro</div><h3>Prefazione</h3><p>Il punto di partenza. Perché questo documento esiste e cosa vuole cambiare.</p><span class="arr">Leggi →</span></a>
-  <a href="debito.html" class="ch-card" style="border-top-color:var(--r)"><div class="num" style="color:var(--r)">Avvertimento</div><h3 style="color:var(--r)">Il Debito che Divora Tutto</h3><p>Cipro 2013. Grecia 2010. Blackstone. Cosa succede se non cambia niente.</p><span class="arr" style="color:var(--r)">Leggi →</span></a>
-  <a href="fiscale.html" class="ch-card"><div class="num">01</div><h3>Sistema Fiscale</h3><p>Solo due tasse. Tutte le spese deducibili. Cap patrimoniale. Lavoro autonomo.</p><span class="arr">Leggi →</span></a>
-  <a href="bilancio.html" class="ch-card gold"><div class="num">02</div><h3>Bilancio dello Stato</h3><p>Tutte le voci di spesa. Saldo anno 1. Gestione surplus.</p><span class="arr">Leggi →</span></a>
-  <a href="pensioni.html" class="ch-card"><div class="num">03</div><h3>Pensioni</h3><p>58 anni. €2.000 garantiti. Fondo individuale. Il fondo resta tuo alla morte.</p><span class="arr">Leggi →</span></a>
-  <a href="energia.html" class="ch-card gold"><div class="num">04</div><h3>Energia & Moneta</h3><p>Nucleare Gen IV. Gas italiano. Lira ancorata all'oro.</p><span class="arr">Leggi →</span></a>
-  <a href="welfare.html" class="ch-card"><div class="num">05</div><h3>Welfare & Carceri</h3><p>Tre categorie. Nessuno invisibile. Carceri produttive.</p><span class="arr">Leggi →</span></a>
-  <a href="proiezioni.html" class="ch-card blue"><div class="num">06</div><h3>Proiezioni 20 Anni</h3><p>Tabella completa. Debito zero anno 18. PIL +141%.</p><span class="arr">Leggi →</span></a>
-  <a href="politica.html" class="ch-card blue"><div class="num">07–13</div><h3>Sistema Politico</h3><p>Voto qualificato. Azzeramento. Mandato KPI. Leggi. Immigrazione.</p><span class="arr">Leggi →</span></a>
-  <a href="riflessioni.html" class="ch-card"><div class="num">Riflessioni</div><h3>Corruzione & Trasparenza</h3><p>Il Dio Denaro. AI di sistema. Chi non sarà d'accordo.</p><span class="arr">Leggi →</span></a>
-  <a href="principi.html" class="ch-card gold"><div class="num">Fondamenti</div><h3>Principi & Obiezioni</h3><p>I 5 principi fondamentali. Le domande difficili. 20 Pilastri.</p><span class="arr">Leggi →</span></a>
-  <a href="fonti.html" class="ch-card"><div class="num">Appendice</div><h3>Fonti & Metodologia</h3><p>Tutti i dati verificabili. Parametri dichiarati. Work in Progress.</p><span class="arr">Leggi →</span></a>
-  <a href="sistema_italia_v151.pdf" target="_blank" class="ch-card gold"><div class="num">Download</div><h3>PDF Completo</h3><p>Scarica il documento completo — 69 pagine.</p><span class="arr">Scarica ↓</span></a>
+<h3>Tassazione Multinazionali — "Vendi qui? Paghi qui."</h3>
+<p>Il principio è semplice: se una multinazionale vende beni o servizi in Italia, paga le tasse sul fatturato italiano — indipendentemente da dove ha la sede legale. Il 20% sul fatturato italiano non è negoziabile e non ha scappatoie: i dati di vendita sono registrati automaticamente.</p>
+<table style="width:100%"><tr><th>Azienda</th><th>Fatturato in Italia</th><th>Tasse oggi</th><th>% effettiva</th><th>Nuovo sistema (20%)</th><th>Delta</th></tr>
+<tr><td>Amazon</td><td class="mono">€6,0B</td><td class="bad">€100M</td><td class="bad">1,6%</td><td class="good">€1,2B</td><td class="good">+€1,1B</td></tr>
+<tr><td>Apple</td><td class="mono">€4,0B</td><td class="bad">€80M</td><td class="bad">2,0%</td><td class="good">€800M</td><td class="good">+€720M</td></tr>
+<tr><td>Google</td><td class="mono">€3,0B</td><td class="bad">€50M</td><td class="bad">1,6%</td><td class="good">€600M</td><td class="good">+€550M</td></tr>
+<tr><td>Meta</td><td class="mono">€1,5B</td><td class="bad">€30M</td><td class="bad">2,0%</td><td class="good">€300M</td><td class="good">+€270M</td></tr>
+<tr><td>Netflix, Spotify, altri</td><td class="mono">~€3B</td><td class="bad">~€60M</td><td class="bad">~2%</td><td class="good">€600M</td><td class="good">+€540M</td></tr>
+<tr style="background:var(--vl)"><td><strong>TOTALE MULTINAZIONALI</strong></td><td class="mono">~€35B</td><td class="bad">~€700M</td><td class="bad">~2%</td><td class="good">~€7B</td><td class="good"><strong>+€6,3B/anno</strong></td></tr>
+</table>
+
+
+<div class="divider"></div>
+
+<h3>Come si Leggono le Barre Verdi — Le Assunzioni del Modello</h3>
+<p>Le barre rosse sono calcolate con le aliquote IRPEF 2024 ufficiali. Le barre verdi usano questo modello: la tassa si calcola sull'80% del residuo annuo non speso. Il residuo dipende da quanto la persona spende:</p>
+
+<table style="font-size:.82rem;width:100%">
+<tr><th>Reddito</th><th>IRPEF oggi</th><th>Assunzione risparmio</th><th>Residuo</th><th>Tassa nuova</th><th>Differenza</th></tr>
+<tr><td>€20.000</td><td class="bad">€4.700</td><td>0% — spende tutto</td><td>€0</td><td class="good">€0</td><td class="good"><strong>-€4.700</strong></td></tr>
+<tr><td>€40.000</td><td class="bad">€10.900</td><td>0% — spende tutto</td><td>€0</td><td class="good">€0</td><td class="good"><strong>-€10.900</strong></td></tr>
+<tr><td>€80.000</td><td class="bad">€27.300</td><td>~17% — risparmia €14k</td><td>€14.000</td><td class="mono">€11.200</td><td class="good"><strong>-€16.100</strong></td></tr>
+<tr><td>€150.000</td><td class="bad">€57.400</td><td>~33% — risparmia €50k</td><td>€50.000</td><td class="mono">€40.000</td><td class="good"><strong>-€17.400</strong></td></tr>
+<tr><td>€500.000</td><td class="bad">€207.900</td><td>~58% — risparmia €290k</td><td>€290.000</td><td class="mono">€232.000</td><td class="bad"><strong>+€24.100</strong></td></tr>
+</table>
+
+<p style="font-size:.85rem;color:var(--g);margin-top:.8rem"><em>Nota: se a €80k si spende tutto — residuo zero — la tassa nel nuovo sistema è zero, non €11.200. Se si risparmia di più, la tassa aumenta proporzionalmente. Chi spende in Italia non paga nulla. Chi accumula paga sull'eccedenza. È una scelta — non un obbligo.</em></p>
+
+<h2>Il Salario Minimo Non Esiste — Non Serve</h2>
+<p>Nel nuovo sistema non esiste un salario minimo per legge. Non perché i lavoratori debbano accettare qualsiasi cosa — ma perché il meccanismo lo rende inutile strutturalmente.</p>
+<p>Ogni lavoratore sa esattamente qual è il suo costo della vita reale: €850/mese di fondo pensione obbligatorio, assicurazione auto, sanitaria, affitto, spese quotidiane. Tutto detraibile al 100%. Sotto quella soglia personale non accetta il lavoro — non per una legge ma perché non gli conviene. È un salario minimo individualizzato e automatico, calibrato sulla vita reale di quella persona, non su un numero generico deciso da chi non la conosce.</p>
+<p>Con il costo della vita drasticamente ridotto — nessuna IMU, nessuna accisa, nessun bollo, energia -70%, tutto detraibile — il potere d'acquisto reale è molto più alto anche con compensi nominalmente simili a oggi. Chi accetta un compenso basso lo fa sapendo che ha già una rete di sicurezza solida sotto di sé: pensione garantita a 58 anni, welfare Cat A se non trova lavoro, costo della vita reale ridotto. Non è costretto ad accettare qualsiasi cosa per sopravvivere.</p>
+<div class="box-g"><p>Il salario minimo di legge nasce dall'esigenza di proteggere chi non ha potere contrattuale. Nel nuovo sistema quella protezione è strutturale — non un numero imposto dall'alto ma un sistema che rende ogni lavoratore naturalmente libero di rifiutare ciò che non gli conviene.</p></div>
+
+
+
 </div>
 
-<footer>
-  <div class="ft-logo">Sistema Italia</div>
-  <div class="ft-sub">Leonardo Casella · Aprile 2026 · <strong style="color:var(--o)">v151</strong></div>
-  <div class="ft-note">Tutti i numeri sono calcolati su fonti ufficiali (ISTAT, MEF, INPS, Banca d'Italia).</div>
-</footer>
-<button class="scroll-top" id="st" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
-<script>
-function toggleMenu(){
-  var m=document.getElementById('mm');
-  m.style.display=m.style.display==='flex'?'none':'flex';
-}
-window.addEventListener('scroll',function(){
-  var b=document.getElementById('st');
-  if(b)b.style.display=window.scrollY>300?'block':'none';
-},{passive:true});
-document.querySelectorAll('.obj-q').forEach(function(q){
-  q.addEventListener('click',function(){
-    q.classList.toggle('open');
-    q.nextElementSibling.classList.toggle('open');
-  });
-});
-</script>
+<div class="ch-nav">
+  <a href="index.html">← Home</a>
+</div>
+  <a href="index.html">← Home</a>
+</div>
+
 </body>
 </html>

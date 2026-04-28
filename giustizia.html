@@ -2,14 +2,9 @@
 <html lang="it">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sistema Italia — Leonardo Casella</title>
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="theme-color" content="#1a5c38">
-<link rel="manifest" href="manifest.json">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sistema Giudiziario — Sistema Italia v151</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
 <style>
 :root{--v:#1a5c38;--vc:#2d8653;--vl:#e8f5ee;--o:#c9a84c;--ol:#fdf5e0;--r:#c0392b;--b:#2c3e7a;--n:#1a1a1a;--g:#4a4a4a;--gl:#f5f5f0;--w:#fafaf8}
 *{margin:0;padding:0;box-sizing:border-box}
@@ -173,38 +168,6 @@ footer{background:var(--n);padding:2.5rem;text-align:center}
   .ch-nav{flex-direction:column}
   .ch-nav a{text-align:center}
 }
-@media(min-width:801px){.nav-pdf-btn{display:inline-block!important}}
-</style>
-<style>
-.hero{min-height:100vh;background:var(--v);display:flex;align-items:center;position:relative;overflow:hidden}
-.hero::after{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 59px,rgba(255,255,255,.015) 60px),repeating-linear-gradient(90deg,transparent,transparent 59px,rgba(255,255,255,.015) 60px)}
-.hi{max-width:1100px;margin:0 auto;padding:4rem 2rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;position:relative;z-index:1}
-.eyebrow{font-family:'JetBrains Mono',monospace;font-size:.68rem;color:var(--o);letter-spacing:.25em;text-transform:uppercase;margin-bottom:1.5rem;display:flex;align-items:center;gap:.75rem}
-.eyebrow::before{content:'';width:30px;height:1px;background:var(--o)}
-.hi h1{font-family:'Playfair Display',serif;font-size:clamp(3rem,5vw,5rem);font-weight:900;line-height:1;color:white;margin-bottom:.5rem}
-.hi h1 span{color:var(--o)}
-.hi .sub{font-family:'Playfair Display',serif;font-size:1.1rem;font-style:italic;color:rgba(255,255,255,.6);line-height:1.6;margin-bottom:1.5rem;max-width:none}
-.hi .author{font-family:'JetBrains Mono',monospace;font-size:.65rem;color:rgba(255,255,255,.4);letter-spacing:.1em;text-transform:uppercase;padding-top:1.5rem;border-top:1px solid rgba(255,255,255,.15);margin-top:1.5rem}
-.stats{display:grid;grid-template-columns:1fr 1fr;gap:1.5px;background:rgba(255,255,255,.08)}
-.stat{background:rgba(0,0,0,.22);padding:1.5rem;border:1px solid rgba(201,168,76,.15)}
-.stat-n{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:var(--o);line-height:1;margin-bottom:.4rem}
-.stat-l{font-family:'JetBrains Mono',monospace;font-size:.58rem;color:rgba(255,255,255,.45);letter-spacing:.1em;text-transform:uppercase;line-height:1.4}
-.stat-s{font-size:.7rem;color:rgba(255,255,255,.28);font-style:italic;margin-top:.2rem}
-.ch-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;padding:3rem 2rem;max-width:1100px;margin:0 auto}
-.ch-card{border:1px solid rgba(26,92,56,.15);padding:1.75rem;background:white;text-decoration:none;display:block;position:relative;transition:transform .2s,box-shadow .2s}
-.ch-card:hover{transform:translateY(-3px);box-shadow:0 8px 30px rgba(26,92,56,.1)}
-.ch-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--v)}
-.ch-card.gold::before{background:var(--o)}.ch-card.blue::before{background:var(--b)}
-.ch-card .num{font-family:'JetBrains Mono',monospace;font-size:.6rem;color:var(--o);letter-spacing:.15em;text-transform:uppercase;margin-bottom:.6rem}
-.ch-card h3{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--v);margin-bottom:.5rem;line-height:1.3}
-.ch-card.gold h3{color:#7a5f00}.ch-card.blue h3{color:var(--b)}
-.ch-card p{font-size:.83rem;line-height:1.6;color:var(--g);margin:0}
-.ch-card .arr{font-family:'JetBrains Mono',monospace;font-size:.7rem;color:var(--o);margin-top:1rem;display:block}
-.intro-sec{background:var(--gl);padding:3rem 2rem}
-.intro-inner{max-width:1100px;margin:0 auto}
-.intro-inner h2{font-family:'Playfair Display',serif;font-size:2rem;font-weight:900;color:var(--v);margin-bottom:1rem}
-.intro-inner p{font-size:.97rem;line-height:1.85;color:var(--g);max-width:700px}
-@media(max-width:700px){.hi{grid-template-columns:1fr;gap:2rem;padding:3rem 1.25rem}.stats{grid-template-columns:1fr 1fr}.ch-grid{grid-template-columns:1fr;padding:2rem 1.25rem}}
 </style>
 </head>
 <body>
@@ -217,90 +180,49 @@ footer{background:var(--n);padding:2.5rem;text-align:center}
 </nav>
 <div class="mob-menu" id="mm">
   <div class="ms">Naviga</div>
-  <a href="prefazione.html">Prefazione</a>
-  <a href="debito.html">Il Debito che Divora Tutto</a>
-  <a href="fiscale.html">01 — Fiscale</a>
-  <a href="bilancio.html">02 — Bilancio</a>
-  <a href="pensioni.html">03 — Pensioni</a>
-  <a href="energia.html">04 — Energia</a>
-  <a href="welfare.html">05 — Welfare</a>
-  <a href="proiezioni.html">06 — Proiezioni</a>
-  <a href="agricoltura.html">Agricoltura</a>
-  <a href="beni_strategici.html">Beni Strategici</a>
-  <a href="artigiani.html">Artigiani & PMI</a>
-  <a href="informazione.html">Informazione</a>
-  <a href="industria.html">Industria</a>
-  <a href="moneta.html">Moneta & Lira</a>
-  <a href="surplus.html">Surplus & Debito</a>
-  <a href="politica.html">07-13 — Politica</a>
-  <a href="riflessioni.html">Riflessioni</a>
-  <a href="principi.html">Principi</a>
-  <a href="fonti.html">Fonti & WIP</a>
-  <a class="mhome" href="sistema_italia_v151.pdf" target="_blank">PDF Completo ↓</a>
-</div>
 
-<div class="hero">
-  <div class="hi">
-    <div>
-      <div class="eyebrow">Manifesto di Riforma Strutturale</div>
-      <h1>Sistema<br><span>Italia</span></h1>
-      <p class="sub">Un progetto concreto, calcolato e verificabile per ridare agli italiani la sovranità sul proprio paese.</p>
-      <a href="prefazione.html" style="display:inline-flex;align-items:center;gap:.6rem;background:var(--o);color:var(--v);font-family:'JetBrains Mono',monospace;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:.75rem 1.5rem;text-decoration:none;margin-top:.5rem">Inizia a leggere →</a>
-      <div class="author">Leonardo Casella &nbsp;·&nbsp; Aprile 2026 &nbsp;·&nbsp; <strong style="color:var(--o)">v151</strong></div>
-    </div>
-    <div class="stats">
-      <div class="stat"><div class="stat-n">+141%</div><div class="stat-l">PIL in 20 anni</div><div class="stat-s">da €2.100B a €4.179B</div></div>
-      <div class="stat"><div class="stat-n">-1%</div><div class="stat-l">Debito/PIL anno 20 (137%)</div><div class="stat-s">da 138% a 137% in 20 anni (+PIL +99%)</div></div>
-      <div class="stat"><div class="stat-n">Solo 2</div><div class="stat-l">Tasse — IVA e residuo</div><div class="stat-s">tutto il resto eliminato</div></div>
-      <div class="stat"><div class="stat-n">€3.100B</div><div class="stat-l">Fondo pensioni anno 20</div><div class="stat-s">autosufficiente per sempre</div></div>
-    </div>
+<div class="ch-hero">
+  <div class="ch-hero-inner">
+    <div class="ch-num">Sistema Politico — In Sviluppo</div>
+    <h1 class="ch-title">Sistema Giudiziario</h1>
+    <p class="ch-sub">Tempi certi, certezza della pena, separazione delle carriere, AI per le cause.</p>
   </div>
 </div>
 
-<div class="intro-sec">
-  <div class="intro-inner">
-    <h2>Perché l'Italia è in declino da trent'anni.</h2>
-    <p>La risposta non è nella mancanza di risorse — è in un sistema di incentivi sbagliato. Un sistema fiscale che premia chi evade, pensioni che si reggono sul debito dei figli, una politica che protegge chi c'è già invece di selezionare chi sa fare. Questo documento risponde a una domanda: se si potesse ripartire da zero, con numeri reali e principi chiari, come sarebbe l'Italia?</p>
-  </div>
+<div class="content">
+
+<div class="wip-banner" style="background:var(--ol);border:2px solid var(--o);border-radius:8px;padding:1.5rem;margin:2rem 0;text-align:center">
+  <div style="font-size:2rem;margin-bottom:.5rem">🚧</div>
+  <div style="font-size:1.1rem;font-weight:600;color:var(--o);margin-bottom:.5rem">Capitolo in Fase di Sviluppo</div>
+  <p style="color:var(--g);font-size:.9rem;margin:0">Questo capitolo è nella lista delle priorità. Il framework concettuale è definito — i contenuti dettagliati verranno sviluppati progressivamente.</p>
 </div>
 
-<div class="ch-grid">
-  <a href="prefazione.html" class="ch-card"><div class="num">Intro</div><h3>Prefazione</h3><p>Il punto di partenza. Perché questo documento esiste e cosa vuole cambiare.</p><span class="arr">Leggi →</span></a>
-  <a href="debito.html" class="ch-card" style="border-top-color:var(--r)"><div class="num" style="color:var(--r)">Avvertimento</div><h3 style="color:var(--r)">Il Debito che Divora Tutto</h3><p>Cipro 2013. Grecia 2010. Blackstone. Cosa succede se non cambia niente.</p><span class="arr" style="color:var(--r)">Leggi →</span></a>
-  <a href="fiscale.html" class="ch-card"><div class="num">01</div><h3>Sistema Fiscale</h3><p>Solo due tasse. Tutte le spese deducibili. Cap patrimoniale. Lavoro autonomo.</p><span class="arr">Leggi →</span></a>
-  <a href="bilancio.html" class="ch-card gold"><div class="num">02</div><h3>Bilancio dello Stato</h3><p>Tutte le voci di spesa. Saldo anno 1. Gestione surplus.</p><span class="arr">Leggi →</span></a>
-  <a href="pensioni.html" class="ch-card"><div class="num">03</div><h3>Pensioni</h3><p>58 anni. €2.000 garantiti. Fondo individuale. Il fondo resta tuo alla morte.</p><span class="arr">Leggi →</span></a>
-  <a href="energia.html" class="ch-card gold"><div class="num">04</div><h3>Energia & Moneta</h3><p>Nucleare Gen IV. Gas italiano. Lira ancorata all'oro.</p><span class="arr">Leggi →</span></a>
-  <a href="welfare.html" class="ch-card"><div class="num">05</div><h3>Welfare & Carceri</h3><p>Tre categorie. Nessuno invisibile. Carceri produttive.</p><span class="arr">Leggi →</span></a>
-  <a href="proiezioni.html" class="ch-card blue"><div class="num">06</div><h3>Proiezioni 20 Anni</h3><p>Tabella completa. Debito zero anno 18. PIL +141%.</p><span class="arr">Leggi →</span></a>
-  <a href="politica.html" class="ch-card blue"><div class="num">07–13</div><h3>Sistema Politico</h3><p>Voto qualificato. Azzeramento. Mandato KPI. Leggi. Immigrazione.</p><span class="arr">Leggi →</span></a>
-  <a href="riflessioni.html" class="ch-card"><div class="num">Riflessioni</div><h3>Corruzione & Trasparenza</h3><p>Il Dio Denaro. AI di sistema. Chi non sarà d'accordo.</p><span class="arr">Leggi →</span></a>
-  <a href="principi.html" class="ch-card gold"><div class="num">Fondamenti</div><h3>Principi & Obiezioni</h3><p>I 5 principi fondamentali. Le domande difficili. 20 Pilastri.</p><span class="arr">Leggi →</span></a>
-  <a href="fonti.html" class="ch-card"><div class="num">Appendice</div><h3>Fonti & Metodologia</h3><p>Tutti i dati verificabili. Parametri dichiarati. Work in Progress.</p><span class="arr">Leggi →</span></a>
-  <a href="sistema_italia_v151.pdf" target="_blank" class="ch-card gold"><div class="num">Download</div><h3>PDF Completo</h3><p>Scarica il documento completo — 69 pagine.</p><span class="arr">Scarica ↓</span></a>
+<h2>Cosa Verrà Sviluppato</h2>
+<p>Questo capitolo affronterà in dettaglio tutti gli aspetti di <strong>Sistema Giudiziario</strong> nel contesto del nuovo sistema. I temi principali da trattare:</p>
+<ul>
+<li>Tempi del processo</li>
+<li>Prescrizione</li>
+<li>Separazione carriere GIP/GUP</li>
+<li>AI per gestione arretrato</li>
+<li>Riforma carceri</li>
+<li>Magistratura e indipendenza</li>
+<li>Costi del processo</li>
+<li>Mediazione civile</li>
+</ul>
+
+<h2>Il Principio Base</h2>
+<p>Anche in questo ambito vale il principio generale del sistema: <strong>le regole devono rendere conveniente fare la cosa giusta</strong>. Non servono controlli se il sistema premia chi lavora bene e penalizza chi lavora male. Non servono eccezioni se le regole sono chiare e uguali per tutti.</p>
+<p>I dettagli su come questo principio si applica a sistema giudiziario verranno sviluppati in questa pagina.</p>
+
+<div class="box-o" style="margin-top:2rem">
+  <p>Hai idee, dati o proposte su questo tema? Il sistema cresce con i contributi di chi lo legge — portando fonti, numeri e argomentazioni.</p>
 </div>
 
-<footer>
-  <div class="ft-logo">Sistema Italia</div>
-  <div class="ft-sub">Leonardo Casella · Aprile 2026 · <strong style="color:var(--o)">v151</strong></div>
-  <div class="ft-note">Tutti i numeri sono calcolati su fonti ufficiali (ISTAT, MEF, INPS, Banca d'Italia).</div>
-</footer>
-<button class="scroll-top" id="st" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
-<script>
-function toggleMenu(){
-  var m=document.getElementById('mm');
-  m.style.display=m.style.display==='flex'?'none':'flex';
-}
-window.addEventListener('scroll',function(){
-  var b=document.getElementById('st');
-  if(b)b.style.display=window.scrollY>300?'block':'none';
-},{passive:true});
-document.querySelectorAll('.obj-q').forEach(function(q){
-  q.addEventListener('click',function(){
-    q.classList.toggle('open');
-    q.nextElementSibling.classList.toggle('open');
-  });
-});
-</script>
+</div>
+
+<div class="ch-nav">
+  <a href="index.html">← Home</a>
+</div>
+
 </body>
 </html>
