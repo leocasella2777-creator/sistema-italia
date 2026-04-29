@@ -21,7 +21,7 @@ nav{position:sticky;top:0;z-index:200;background:rgba(26,92,56,.97);backdrop-fil
 .nav-home:hover{color:var(--o);border-color:var(--o)}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:.4rem;background:none;border:none}
 .hamburger span{display:block;width:22px;height:2px;background:var(--o)}
-.mob-menu{display:none!important;position:fixed;top:54px;left:0;right:0;bottom:0;background:rgba(10,24,16,.98);z-index:9999;flex-direction:column;overflow-y:auto;padding:.5rem 0}
+.mob-menu{display:none;position:fixed;top:54px;left:0;right:0;bottom:0;background:rgba(10,24,16,.98);z-index:9999;flex-direction:column;overflow-y:auto;padding:.5rem 0}
 .mob-menu a{display:block;font-family:'Source Serif 4',serif;font-size:.92rem;color:rgba(255,255,255,.75);text-decoration:none;padding:.65rem 1.5rem;border-bottom:1px solid rgba(255,255,255,.06)}
 .mob-menu a:hover{color:var(--o);background:rgba(201,168,76,.08)}
 .mob-menu .ms{font-family:'JetBrains Mono',monospace;font-size:.58rem;color:rgba(255,255,255,.3);letter-spacing:.2em;text-transform:uppercase;padding:.6rem 1.5rem .3rem;margin-top:.5rem}
@@ -223,25 +223,7 @@ footer{background:var(--n);padding:2.5rem;text-align:center}
   <a href="principi.html">Principi</a>
   <a href="fonti.html">Fonti</a>
 </div>
-  <a href="prefazione.html">Prefazione</a>
-  <a href="debito.html">Il Debito</a>
-  <a href="fiscale.html">01 — Fiscale</a>
-  <a href="bilancio.html">02 — Bilancio</a>
-  <a href="pensioni.html">03 — Pensioni</a>
-  <a href="energia.html">04 — Energia</a>
-  <a href="welfare.html">05 — Welfare</a>
-  <a href="proiezioni.html">06 — Proiezioni</a>
-  <a href="agricoltura.html">Agricoltura</a>
-  <a href="beni_strategici.html">Beni Strategici</a>
-  <a href="artigiani.html">Artigiani & PMI</a>
-  <a href="informazione.html">Informazione</a>
-  <a href="industria.html">Industria</a>
-  <a href="moneta.html">Moneta & Lira</a>
-  <a href="surplus.html">Surplus & Debito</a>
-  <a href="politica.html">07-13 — Politica</a>
-  <a href="riflessioni.html">Riflessioni</a>
-  <a href="fonti.html">Fonti & WIP</a>
-  <a class="mhome" href="sistema_italia_v167.pdf" target="_blank">PDF Completo ↓</a>
+  <a class="mhome" href="sistema_italia_v168.pdf" target="_blank">PDF Completo ↓</a>
 </div>
 <div class="ch-hero"><div class="ch-hero-inner">
   <div class="ch-num">Fondamenti</div>
@@ -347,7 +329,7 @@ footer{background:var(--n);padding:2.5rem;text-align:center}
   <div class="ft-note">Tutti i numeri sono calcolati su fonti ufficiali (ISTAT, MEF, INPS, Banca d'Italia).</div>
 </footer><button class="scroll-top" id="st" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 <script>
-function toggleMenu(){var m=document.getElementById('mm');if(m.style.display==='none'||m.style.display===''){m.style.display='flex';} else {m.style.display='none';}}else{m.style.cssText='display:flex!important';}}
+function toggleMenu(){var m=document.getElementById('mm');var open=m.style.display==='flex';m.style.display=open?'none':'flex';document.querySelector('.hamburger').setAttribute('aria-expanded',!open);}else{m.style.cssText='display:flex!important';}}
 window.addEventListener('scroll',function(){var b=document.getElementById('st');if(b)b.style.display=window.scrollY>300?'block':'none';},{passive:true});
 document.querySelectorAll && document.querySelectorAll('.obj-q').forEach(function(q){
   q.addEventListener('click',function(){q.classList.toggle('open');q.nextElementSibling.classList.toggle('open');});
