@@ -24,7 +24,7 @@ nav{position:sticky;top:0;z-index:200;background:rgba(26,92,56,.97);backdrop-fil
 .nav-home:hover{color:var(--o);border-color:var(--o)}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:.4rem;background:none;border:none}
 .hamburger span{display:block;width:22px;height:2px;background:var(--o)}
-.mob-menu{display:none;position:fixed;top:54px;left:0;right:0;bottom:0;background:rgba(10,24,16,.98);z-index:9999;flex-direction:column;overflow-y:auto;padding:.5rem 0}
+.mob-menu{display:none!important;position:fixed;top:54px;left:0;right:0;bottom:0;background:rgba(10,24,16,.98);z-index:9999;flex-direction:column;overflow-y:auto;padding:.5rem 0}
 .mob-menu a{display:block;font-family:'Source Serif 4',serif;font-size:.92rem;color:rgba(255,255,255,.75);text-decoration:none;padding:.65rem 1.5rem;border-bottom:1px solid rgba(255,255,255,.06)}
 .mob-menu a:hover{color:var(--o);background:rgba(201,168,76,.08)}
 .mob-menu .ms{font-family:'JetBrains Mono',monospace;font-size:.58rem;color:rgba(255,255,255,.3);letter-spacing:.2em;text-transform:uppercase;padding:.6rem 1.5rem .3rem;margin-top:.5rem}
@@ -202,7 +202,7 @@ canvas{max-width:100%}
     <button class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
   </div>
 </nav>
-<div class="mob-menu" id="mm">
+<div class="mob-menu" id="mm" style="display:none">
   <div class="ms">Naviga</div>
   <a href="prefazione.html">Prefazione</a>
   <a href="debito.html">Il Debito</a>
@@ -253,7 +253,7 @@ canvas{max-width:100%}
   <a href="riflessioni.html">Riflessioni</a>
   <a href="principi.html">Principi</a>
   <a href="fonti.html">Fonti & WIP</a>
-  <a class="mhome" href="sistema_italia_v164.pdf" target="_blank">PDF Completo ↓</a>
+  <a class="mhome" href="sistema_italia_v166.pdf" target="_blank">PDF Completo ↓</a>
 </div>
 <div class="ch-hero">
   <div class="ch-hero-inner">
@@ -571,7 +571,7 @@ canvas{max-width:100%}
 <button class="scroll-top" id="st" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
 <script>
-function toggleMenu(){var m=document.getElementById('mm');m.style.display=m.style.display==='flex'?'none':'flex';}
+function toggleMenu(){var m=document.getElementById('mm');if(m.style.display==='none'||m.style.display===''){m.style.display='flex';} else {m.style.display='none';}}else{m.style.cssText='display:flex!important';}}
 window.addEventListener('scroll',function(){var b=document.getElementById('st');if(b)b.style.display=window.scrollY>300?'block':'none';},{passive:true});
 document.querySelectorAll && document.querySelectorAll('.obj-q').forEach(function(q){
   q.addEventListener('click',function(){q.classList.toggle('open');q.nextElementSibling.classList.toggle('open');});
