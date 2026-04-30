@@ -236,7 +236,7 @@ canvas{max-width:100%}
   <a href="principi.html">Principi</a>
   <a href="fonti.html">Fonti</a>
 </div>
-  <a class="mhome pdf-btn" href="sistema_italia_v170.pdf" target="_blank">↓ Scarica PDF</a>
+  <a class="mhome pdf-btn" href="sistema_italia_v172.pdf" target="_blank">↓ Scarica PDF</a>
 </div>
 <div class="ch-hero">
   <div class="ch-hero-inner">
@@ -342,43 +342,73 @@ canvas{max-width:100%}
 <p>La logica è semplice: la democrazia funziona quando nessuno ha abbastanza denaro da comprare i rappresentanti. Con un cap di €200.000, nessun cittadino ha la forza economica per distorcere il sistema politico. Le grandi decisioni restano ai cittadini collettivamente — non a chi ha più miliardi.</p>
 
 <h3>Bonus Figli — Cap Patrimoniale</h3>
+<p>Il cap aumenta per ogni figlio minorenne. Quando un figlio compie 18 anni il cap si riduce — e scatta il calcolo della <strong>quota garantita</strong>.</p>
+
 <table style="width:100%">
-<tr><th>Situazione</th><th>Cap aggiuntivo</th><th>Logica</th></tr>
-<tr><td>Ogni figlio under 18 (due genitori)</td><td class="mono">+€25.000 per genitore</td><td>Garantisce stabilità economica alla famiglia con figli</td></tr>
-<tr><td>Genitore solo</td><td class="mono">+€50.000 per figlio</td><td>Doppio onere su una sola persona</td></tr>
-<tr><td>Figlio che compie 18 anni</td><td>Il cap del genitore si riduce del bonus relativo a quel figlio</td><td>Se c'è eccedenza rispetto al nuovo cap: spettante assegnato al figlio. Se il genitore è sotto cap: i €15k spettanti vengono assegnati comunque al figlio per equità.</td></tr>
-<tr><td>Eccedenza oltre lo spettante</td><td>Redistribuita tra tutti i figli</td><td>L'eccedenza oltre i €15k viene divisa tra tutti i figli (maggiorenni e non). I minorenni ricevono la quota quando compiono 18 anni.</td></tr>
+<tr><th>Situazione</th><th>Cap per genitore</th></tr>
+<tr><td>Nessun figlio minore</td><td class="mono">€200.000 base</td></tr>
+<tr><td>1 figlio minore (due genitori)</td><td class="mono">€225.000 (+€25k)</td></tr>
+<tr><td>2 figli minorenni (due genitori)</td><td class="mono">€250.000 (+€25k per figlio)</td></tr>
+<tr><td>1 figlio minore (genitore solo)</td><td class="mono">€250.000 (+€50k)</td></tr>
+<tr><td>2 figli minorenni (genitore solo)</td><td class="mono">€300.000 (+€50k per figlio)</td></tr>
 </table>
 
-<h3>Esempio con 2 Figli — 3 Scenari</h3>
-<p>Genitore solo, 2 figli. Cap base: €200k + €100k bonus = <strong>€300k</strong>. Quando il secondo figlio compie 18 anni il cap torna a €200k.</p>
+<div class="divider"></div>
+<h3>Come Funziona al Compimento dei 18 Anni</h3>
+<p>Il <strong>primo figlio che diventa maggiorenne stabilisce la quota garantita</strong> per tutti i figli. Quella quota vale per sempre — ogni figlio successivo ha diritto allo stesso importo, garantito anche se il genitore va sotto cap.</p>
+
+<h4 style="color:var(--v);margin:1.2rem 0 .5rem">Esempio pratico — due genitori, 2 figli</h4>
+<p style="font-size:.85rem;color:var(--g)">Cap con 2 figli: €250k. Al 18° del primo figlio scende a €225k. Al 18° del secondo scende a €200k.</p>
+
 <table style="width:100%">
-<tr><th>Situazione genitore</th><th>Cosa succede</th></tr>
-<tr><td>Ha <strong>€250k</strong> (eccedenza €50k)</td><td class="good">€15k al secondo figlio + €35k redistribuiti tra entrambi i figli (€17.500 ciascuno). Genitore torna a €200k ✓</td></tr>
-<tr><td>Ha <strong>€210k</strong> (eccedenza €10k)</td><td class="good">€15k al secondo figlio comunque (equità garantita). Genitore scende temporaneamente sotto cap — nessuna penale, si ricalibra.</td></tr>
-<tr><td>Ha <strong>€180k</strong> (sotto cap)</td><td class="good">€15k al secondo figlio comunque. Il genitore continua con il suo cap normale. Nessun debito, nessuna penale.</td></tr>
+<tr><th>Momento</th><th>Situazione</th><th>Cosa succede</th></tr>
+
+<tr style="background:var(--vl)">
+<td rowspan="2"><strong>18° del<br>primo figlio</strong><br><small>Cap: €250k→€225k</small></td>
+<td>Genitore ha <strong>€240k</strong><br><small>eccedenza €15k</small></td>
+<td class="good">
+  ✓ €15k al primo figlio<br>
+  ✓ <strong>€15k diventa la quota garantita</strong> per tutti i figli<br>
+  ✓ Genitore resta a €225k
+</td></tr>
+<tr>
+<td>Genitore ha <strong>€210k</strong><br><small>nessuna eccedenza</small></td>
+<td>
+  Nessuna eccedenza → quota garantita = €0<br>
+  <small style="color:var(--g)">Nessun figlio riceve nulla in questo momento</small>
+</td></tr>
+
+<tr style="background:var(--vl)">
+<td rowspan="3"><strong>18° del<br>secondo figlio</strong><br><small>Cap: €225k→€200k</small></td>
+<td>Genitore ha <strong>€225k</strong><br><small>eccedenza €25k</small></td>
+<td class="good">
+  ✓ €15k garantiti al secondo figlio<br>
+  ✓ €10k rimanenti divisi tra tutti i figli: €5k al primo (già 25 anni), €5k al secondo<br>
+  ✓ Genitore resta a €200k
+</td></tr>
+<tr>
+<td>Genitore ha <strong>€210k</strong><br><small>eccedenza €10k — meno dei €15k garantiti</small></td>
+<td>
+  ✓ €15k garantiti al secondo figlio comunque<br>
+  ✓ €10k eccedenza divisa: €5k al primo figlio, €5k al secondo<br>
+  ⚠ €5k mancanti scalati dal cap del genitore<br>
+  → Genitore: €210k - €15k = <strong>€195k</strong> (sotto cap — nessuna penale)
+</td></tr>
+<tr>
+<td>Genitore ha <strong>€185k</strong><br><small>sotto cap — nessuna eccedenza</small></td>
+<td>
+  ✓ €15k garantiti al secondo figlio comunque<br>
+  ✓ Scalati dal cap del genitore<br>
+  → Genitore: €185k - €15k = <strong>€170k</strong> (sotto cap — nessuna penale)<br>
+  <small style="color:var(--g)">Il genitore ha goduto del bonus cap per anni — è giusto garantire la quota ai figli</small>
+</td></tr>
 </table>
-<p style="font-size:.82rem;color:var(--g)"><em>Ogni figlio non può ricevere più di €200k in un singolo momento. Se supera il cap: 12 mesi per rientrare, eccedenza allo Stato — regola standard.</em></p>
-<h3>Cap per le Aziende — Proporzionale al Fatturato</h3>
-<p>Le aziende seguono regole diverse rispetto ai cittadini. Un'azienda con 5 dipendenti e €1 milione di fatturato ha bisogno di liquidità operativa diversa da un'azienda con 60.000 dipendenti e miliardi di fatturato. Il cap aziendale non è fisso — è proporzionale al giro d'affari.</p>
-<table style="width:100%"><tr><th>Fatturato annuo</th><th>Cap liquidità</th><th>Logica</th></tr>
-<tr><td>Fino a €1M</td><td class="mono">€500k</td><td>~6 mesi di operatività garantiti</td></tr>
-<tr><td>€1M — €10M</td><td class="mono">30% del fatturato</td><td>Margine di manovra per PMI</td></tr>
-<tr><td>€10M — €100M</td><td class="mono">20% del fatturato</td><td>Aziende medie — scala proporzionale</td></tr>
-<tr><td>Oltre €100M</td><td class="mono">15% del fatturato</td><td>Grandi aziende — liquidità operativa sufficiente</td></tr>
-</table>
 
-<div class="box-g"><p><strong>Cosa succede alla liquidità oltre il cap aziendale:</strong><br>
-— Non può andare al proprietario: lui segue le regole del cittadino (cap €200k personale)<br>
-— Non può essere distribuita come dividendi che porterebbero il titolare oltre il suo cap<br>
-— Deve essere reinvestita in azienda entro 12 mesi: dipendenti, R&D, macchinari, espansione<br>
-— Se non reinvestita entro 12 mesi: assorbita dallo Stato<br>
-— Gli investimenti (macchinari, immobili, brevetti) non sono liquidità — restano dell'azienda senza limiti</p></div>
-
-<h3>Il Titolare e l'Azienda sono Soggetti Separati</h3>
-<p>L'azienda è a tutti gli effetti un soggetto autonomo. Ha il suo cap, le sue regole, i suoi obblighi. Il titolare non può usare l'azienda come veicolo per aggirare il cap personale. Non può trasferire beni aziendali al patrimonio personale. Non può beneficiare della crescita aziendale oltre il suo cap di €200k.</p>
-<p>Il titolare può prendere il suo stipendio — certificato come spesa aziendale, soggetto alle sue tasse personali come qualsiasi lavoratore autonomo. L'azienda cresce, investe, produce — ma quella ricchezza rimane dell'azienda, non della persona fisica. È un sistema che incentiva a costruire imprese solide invece di usarle per accumulare ricchezza personale.</p>
-
+<div class="box-o" style="margin-top:1.2rem">
+<p><strong>Il principio:</strong> il genitore ha beneficiato del bonus cap per tutti gli anni di minore età del figlio. È giusto che garantisca la quota stabilita anche quando non ha eccedenza — il sistema scala dal suo cap come bilanciamento di quel beneficio goduto.</p>
+<p style="margin-top:.5rem"><em>Ogni figlio non può ricevere più di €200k in un singolo momento. Se supera il cap: 12 mesi per rientrare — regola standard.</em></p>
+<p style="margin-top:.5rem"><em>Vale anche per il primo figlio che riceve quote successive anni dopo: se quei soldi lo portano oltre il cap, ha 12 mesi per spenderli. Poi l'eccedenza va allo Stato. Nessun trattamento speciale perché viene dalla famiglia — le regole del cap si applicano a tutti allo stesso modo.</em></p>
+</div>
 <div class="divider"></div>
 
 <h2>Nuovo Rapporto di Lavoro — Tutti Professionisti</h2>
